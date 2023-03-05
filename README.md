@@ -14,7 +14,7 @@ Projekt rješava problem komunikacije Centra za informatičku podršku (CIP-a) i
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
+U nastavku se nalazi link na [zadatak](https://github.com/foivz/pi2023-zadace-mklement21/blob/7b6cd8fbb1c02c601106036fb42b7ef8053f4904/Zadatak%20-%20Help%20Desk%20za%20CIP.pdf).
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
