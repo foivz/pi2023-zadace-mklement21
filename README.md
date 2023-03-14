@@ -9,7 +9,7 @@ Matea Klement | mklement21@foi.hr | 0016154421 | mklement21
 
 ## Opis domene
 
-Centar za informatičku podršku na Fakultetu organizacije i informatike nudi profesorima, studentima, suradnicima i ostalom osoblju pomoć i tehničku podršku pri radu na prostoru fakulteta i Studentskog doma. U tu svrhu, napravljena je aplikacija Help Desk koja njihovim korisnicima mogućuje lakšu prijavu kvarova na prostoru fakulteta i Studentskog doma. Aplikacija omogućuje, nakon prijave korisnika, pregled korisničkih podataka, pregled statusa dosadašnjih prijavljenih problema ili izradu novog zahtjeva za prijavu. Korisnici imaju uvid o stanju njihove prijave kao i kada bi se njihov problem trebao riješiti. Također, zaposlenicima je omogućen unos komentara, dodjela zadataka kao i pretraživanje po hitnosti zadatka.
+Centar za informatičku podršku na Fakultetu organizacije i informatike nudi profesorima, studentima, suradnicima i ostalom osoblju pomoć i tehničku podršku pri radu na prostoru fakulteta. U tu svrhu, napravljena je aplikacija Help Desk koja njihovim korisnicima mogućuje lakšu prijavu kvarova. Aplikacija omogućuje, nakon prijave korisnika, pregled korisničkih podataka, pregled statusa dosadašnjih prijavljenih problema ili izradu novog zahtjeva za prijavu. Korisnici imaju uvid o stanju njihove prijave kao i kada bi se njihov problem trebao riješiti. Također, zaposlenicima je omogućen unos komentara, dodjela zadataka kao i pretraživanje po hitnosti zadatka.
 
 
 
