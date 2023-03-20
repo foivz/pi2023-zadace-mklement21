@@ -12,19 +12,9 @@ Matea Klement | mklement21@foi.hr | 0016154421 | mklement21
 Centar za informatičku podršku na Fakultetu organizacije i informatike nudi profesorima, studentima, suradnicima i ostalom osoblju pomoć i tehničku podršku pri radu na prostoru fakulteta. U tu svrhu, napravljena je aplikacija Help Desk koja njihovim korisnicima mogućuje lakšu prijavu kvarova. Aplikacija omogućuje, nakon prijave korisnika, pregled korisničkih podataka, pregled statusa dosadašnjih prijavljenih problema ili izradu novog zahtjeva za prijavu. Korisnici imaju uvid o stanju njihove prijave kao i kada bi se njihov problem trebao riješiti. Također, zaposlenicima je omogućen unos komentara, dodjela zadataka kao i pretraživanje po hitnosti zadatka.
 
 
-
 ## Specifikacija projekta
 
-Oznaka        | Naziv   | Kratki opis 
--| -| -
-F01           | Registracija korisnika              |  
-F02           | Prijava korisnika                   |
-F03           | Početna stranica                    | 
-F04           | Korisnički podatci                  |
-F05           | Informacije o prijavljenom kvaru    |
-F06           | Izrada zahtjeva                     |
-F07           | Pregled korisničkih zahtjeva        |
-
+Zahtjevi ovoga softverskog rješenja odnose se na graničavanje pristupa korisničkim podatcima, pregled podnesenih zahtjeva, kreiranje novog zahtjeva, mogućnost upravljanja korisničkim zahtjevom, praćenje napretka prijave, unos ocjena zadovoljstva korisnika, promjena korisničkih podataka i ispis izvještaja podnesenog zahtjeva.
 
 ## Zadatak
 U nastavku se nalazi link na [zadatak](https://github.com/foivz/pi2023-zadace-mklement21/blob/7b6cd8fbb1c02c601106036fb42b7ef8053f4904/Zadatak%20-%20Help%20Desk%20za%20CIP.pdf).
