@@ -74,3 +74,9 @@ Slika 28. https://user-images.githubusercontent.com/126599504/226212467-a194b644
 Slika 29. https://user-images.githubusercontent.com/126599504/226212536-6a30d077-7087-4fd8-8d12-74540d7df91f.png
 
 Slika 30. https://user-images.githubusercontent.com/126599504/226212476-469a6f7a-d704-4cd8-bb82-22a3daf019b6.png
+
+
+[Specifikacija softverskih zahtjeva - Primjer (3).pdf](https://github.com/foivz/pi2023-zadace-mklement21/files/11016565/Specifikacija.softverskih.zahtjeva.-.Primjer.3.pdf)
+[Zadatak - Help Desk za CIP.pdf](https://github.com/foivz/pi2023-zadace-mklement21/files/11016566/Zadatak.-.Help.Desk.za.CIP.pdf)
+[2.1 Strukturiranje specifikacija zahtjeva.pdf](https://github.com/foivz/pi2023-zadace-mklement21/files/11016569/2.1.Strukturiranje.specifikacija.zahtjeva.pdf)
+
