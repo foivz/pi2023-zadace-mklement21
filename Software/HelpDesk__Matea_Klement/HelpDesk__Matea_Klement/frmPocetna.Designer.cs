@@ -23,55 +23,55 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnZahtjevi = new System.Windows.Forms.Button();
-            this.btnProfil = new System.Windows.Forms.Button();
+            this.panelPocetna = new System.Windows.Forms.Panel();
+            this.btnPocetnaProfil = new System.Windows.Forms.Button();
+            this.btnPocetnaZahtjevi = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPozdrav = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblKontaktBroj = new System.Windows.Forms.Label();
+            this.lblKontaktEmail = new System.Windows.Forms.Label();
+            this.lblKontaktAdresa = new System.Windows.Forms.Label();
             this.lblKontakt = new System.Windows.Forms.Label();
-            this.lblAdresa = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblBroj = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelPocetna.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelPocetna
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.btnProfil);
-            this.panel1.Controls.Add(this.btnZahtjevi);
-            this.panel1.Location = new System.Drawing.Point(1, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 41);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelPocetna.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelPocetna.Controls.Add(this.btnPocetnaProfil);
+            this.panelPocetna.Controls.Add(this.btnPocetnaZahtjevi);
+            this.panelPocetna.Location = new System.Drawing.Point(1, 36);
+            this.panelPocetna.Name = "panelPocetna";
+            this.panelPocetna.Size = new System.Drawing.Size(799, 41);
+            this.panelPocetna.TabIndex = 2;
+            this.panelPocetna.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnZahtjevi
+            // btnPocetnaProfil
             // 
-            this.btnZahtjevi.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnZahtjevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZahtjevi.Location = new System.Drawing.Point(149, 3);
-            this.btnZahtjevi.Name = "btnZahtjevi";
-            this.btnZahtjevi.Size = new System.Drawing.Size(161, 35);
-            this.btnZahtjevi.TabIndex = 3;
-            this.btnZahtjevi.Text = "Zahtjevi";
-            this.btnZahtjevi.UseVisualStyleBackColor = false;
-            this.btnZahtjevi.Click += new System.EventHandler(this.button1_Click);
+            this.btnPocetnaProfil.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPocetnaProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPocetnaProfil.Location = new System.Drawing.Point(507, 3);
+            this.btnPocetnaProfil.Name = "btnPocetnaProfil";
+            this.btnPocetnaProfil.Size = new System.Drawing.Size(161, 35);
+            this.btnPocetnaProfil.TabIndex = 4;
+            this.btnPocetnaProfil.Text = "Profil";
+            this.btnPocetnaProfil.UseVisualStyleBackColor = false;
+            this.btnPocetnaProfil.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btnProfil
+            // btnPocetnaZahtjevi
             // 
-            this.btnProfil.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProfil.Location = new System.Drawing.Point(507, 3);
-            this.btnProfil.Name = "btnProfil";
-            this.btnProfil.Size = new System.Drawing.Size(161, 35);
-            this.btnProfil.TabIndex = 4;
-            this.btnProfil.Text = "Profil";
-            this.btnProfil.UseVisualStyleBackColor = false;
-            this.btnProfil.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnPocetnaZahtjevi.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPocetnaZahtjevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPocetnaZahtjevi.Location = new System.Drawing.Point(149, 3);
+            this.btnPocetnaZahtjevi.Name = "btnPocetnaZahtjevi";
+            this.btnPocetnaZahtjevi.Size = new System.Drawing.Size(161, 35);
+            this.btnPocetnaZahtjevi.TabIndex = 3;
+            this.btnPocetnaZahtjevi.Text = "Zahtjevi";
+            this.btnPocetnaZahtjevi.UseVisualStyleBackColor = false;
+            this.btnPocetnaZahtjevi.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -95,14 +95,44 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.lblBroj);
-            this.panel3.Controls.Add(this.lblEmail);
-            this.panel3.Controls.Add(this.lblAdresa);
+            this.panel3.Controls.Add(this.lblKontaktBroj);
+            this.panel3.Controls.Add(this.lblKontaktEmail);
+            this.panel3.Controls.Add(this.lblKontaktAdresa);
             this.panel3.Controls.Add(this.lblKontakt);
             this.panel3.Location = new System.Drawing.Point(200, 330);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(424, 97);
             this.panel3.TabIndex = 4;
+            // 
+            // lblKontaktBroj
+            // 
+            this.lblKontaktBroj.AutoSize = true;
+            this.lblKontaktBroj.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKontaktBroj.Location = new System.Drawing.Point(304, 69);
+            this.lblKontaktBroj.Name = "lblKontaktBroj";
+            this.lblKontaktBroj.Size = new System.Drawing.Size(97, 19);
+            this.lblKontaktBroj.TabIndex = 3;
+            this.lblKontaktBroj.Text = "+385*********";
+            // 
+            // lblKontaktEmail
+            // 
+            this.lblKontaktEmail.AutoSize = true;
+            this.lblKontaktEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKontaktEmail.Location = new System.Drawing.Point(262, 38);
+            this.lblKontaktEmail.Name = "lblKontaktEmail";
+            this.lblKontaktEmail.Size = new System.Drawing.Size(139, 19);
+            this.lblKontaktEmail.TabIndex = 2;
+            this.lblKontaktEmail.Text = "helpdesk@gmail.com";
+            // 
+            // lblKontaktAdresa
+            // 
+            this.lblKontaktAdresa.AutoSize = true;
+            this.lblKontaktAdresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKontaktAdresa.Location = new System.Drawing.Point(317, 10);
+            this.lblKontaktAdresa.Name = "lblKontaktAdresa";
+            this.lblKontaktAdresa.Size = new System.Drawing.Size(84, 19);
+            this.lblKontaktAdresa.TabIndex = 1;
+            this.lblKontaktAdresa.Text = "Adresa : FOI";
             // 
             // lblKontakt
             // 
@@ -114,36 +144,6 @@
             this.lblKontakt.TabIndex = 0;
             this.lblKontakt.Text = "Kontakt informacije";
             // 
-            // lblAdresa
-            // 
-            this.lblAdresa.AutoSize = true;
-            this.lblAdresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblAdresa.Location = new System.Drawing.Point(317, 10);
-            this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(84, 19);
-            this.lblAdresa.TabIndex = 1;
-            this.lblAdresa.Text = "Adresa : FOI";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblEmail.Location = new System.Drawing.Point(262, 38);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(139, 19);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "helpdesk@gmail.com";
-            // 
-            // lblBroj
-            // 
-            this.lblBroj.AutoSize = true;
-            this.lblBroj.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblBroj.Location = new System.Drawing.Point(304, 69);
-            this.lblBroj.Name = "lblBroj";
-            this.lblBroj.Size = new System.Drawing.Size(97, 19);
-            this.lblBroj.TabIndex = 3;
-            this.lblBroj.Text = "+385*********";
-            // 
             // FrmPocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,7 +151,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPocetna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -159,7 +159,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FrmPocetna_Load);
+            this.panelPocetna.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -170,15 +171,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnZahtjevi;
-        private System.Windows.Forms.Button btnProfil;
+        private System.Windows.Forms.Panel panelPocetna;
+        private System.Windows.Forms.Button btnPocetnaZahtjevi;
+        private System.Windows.Forms.Button btnPocetnaProfil;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPozdrav;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblKontakt;
-        private System.Windows.Forms.Label lblAdresa;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblBroj;
+        private System.Windows.Forms.Label lblKontaktAdresa;
+        private System.Windows.Forms.Label lblKontaktEmail;
+        private System.Windows.Forms.Label lblKontaktBroj;
     }
 }

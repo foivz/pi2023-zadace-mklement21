@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblPrijavaKorisnika = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelPrijava = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,14 +51,14 @@
             this.lblPrijavaKorisnika.Text = "Prijava korisnika";
             this.lblPrijavaKorisnika.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel1
+            // panelPrijava
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Location = new System.Drawing.Point(-5, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 41);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelPrijava.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelPrijava.Location = new System.Drawing.Point(-5, 24);
+            this.panelPrijava.Name = "panelPrijava";
+            this.panelPrijava.Size = new System.Drawing.Size(526, 41);
+            this.panelPrijava.TabIndex = 1;
+            this.panelPrijava.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -72,16 +72,20 @@
             this.panel2.Size = new System.Drawing.Size(288, 167);
             this.panel2.TabIndex = 2;
             // 
-            // lblUsername
+            // txtPassword
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblUsername.Location = new System.Drawing.Point(92, 15);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(108, 19);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "Korisničko ime";
-            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtPassword.Location = new System.Drawing.Point(65, 125);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(174, 22);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(65, 43);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(174, 22);
+            this.txtUsername.TabIndex = 2;
             // 
             // lblPassword
             // 
@@ -95,20 +99,16 @@
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblPassword.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtUsername
+            // lblUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(65, 43);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(174, 22);
-            this.txtUsername.TabIndex = 2;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(65, 125);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(174, 22);
-            this.txtPassword.TabIndex = 3;
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblUsername.Location = new System.Drawing.Point(92, 15);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(108, 19);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "Korisničko ime";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnLogin
             // 
@@ -128,7 +128,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPrijavaKorisnika);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPrijava);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -147,7 +147,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPrijavaKorisnika;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPrijava;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;

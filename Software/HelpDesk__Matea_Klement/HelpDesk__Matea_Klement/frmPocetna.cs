@@ -23,6 +23,13 @@ namespace HelpDesk__Matea_Klement {
         }
 
         private void button1_Click_1(object sender, EventArgs e) {
+            FrmProfil frmProfil = new FrmProfil();
+            Hide();
+            frmProfil.ShowDialog();
+            Close();
+        }
+
+        private void FrmPocetna_Load(object sender, EventArgs e) {
 
         }
     }

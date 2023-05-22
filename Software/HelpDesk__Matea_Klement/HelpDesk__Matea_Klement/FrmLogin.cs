@@ -47,9 +47,8 @@ namespace HelpDesk__Matea_Klement
             }else {
                 if ( username == "student" && password == "student") {
                     FrmPocetna frmPocetna = new FrmPocetna();
-                    Hide();
+
                     frmPocetna.ShowDialog();
-                    Close();
                 } else {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

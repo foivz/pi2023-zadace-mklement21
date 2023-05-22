@@ -52,19 +52,34 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPocetna.cs">
+    <Compile Include="FrmPocetna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPocetna.Designer.cs">
-      <DependentUpon>frmPocetna.cs</DependentUpon>
+    <Compile Include="FrmPocetna.Designer.cs">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfil.Designer.cs">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmZahtjevi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZahtjevi.Designer.cs">
+      <DependentUpon>FrmZahtjevi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPocetna.resx">
-      <DependentUpon>frmPocetna.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPocetna.resx">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfil.resx">
+      <DependentUpon>FrmProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
