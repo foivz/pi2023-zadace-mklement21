@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.panelPocetna = new System.Windows.Forms.Panel();
+            System.Windows.Forms.Panel panelPocetna;
             this.btnPocetnaProfil = new System.Windows.Forms.Button();
             this.btnPocetnaZahtjevi = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -33,21 +33,22 @@
             this.lblKontaktEmail = new System.Windows.Forms.Label();
             this.lblKontaktAdresa = new System.Windows.Forms.Label();
             this.lblKontakt = new System.Windows.Forms.Label();
-            this.panelPocetna.SuspendLayout();
+            panelPocetna = new System.Windows.Forms.Panel();
+            panelPocetna.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPocetna
             // 
-            this.panelPocetna.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panelPocetna.Controls.Add(this.btnPocetnaProfil);
-            this.panelPocetna.Controls.Add(this.btnPocetnaZahtjevi);
-            this.panelPocetna.Location = new System.Drawing.Point(1, 36);
-            this.panelPocetna.Name = "panelPocetna";
-            this.panelPocetna.Size = new System.Drawing.Size(799, 41);
-            this.panelPocetna.TabIndex = 2;
-            this.panelPocetna.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panelPocetna.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            panelPocetna.Controls.Add(this.btnPocetnaProfil);
+            panelPocetna.Controls.Add(this.btnPocetnaZahtjevi);
+            panelPocetna.Location = new System.Drawing.Point(0, 26);
+            panelPocetna.Name = "panelPocetna";
+            panelPocetna.Size = new System.Drawing.Size(799, 41);
+            panelPocetna.TabIndex = 2;
+            panelPocetna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPocetna);
             // 
             // btnPocetnaProfil
             // 
@@ -151,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelPocetna);
+            this.Controls.Add(panelPocetna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -160,7 +161,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna";
             this.Load += new System.EventHandler(this.FrmPocetna_Load);
-            this.panelPocetna.ResumeLayout(false);
+            panelPocetna.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -170,8 +171,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelPocetna;
         private System.Windows.Forms.Button btnPocetnaZahtjevi;
         private System.Windows.Forms.Button btnPocetnaProfil;
         private System.Windows.Forms.Panel panel2;

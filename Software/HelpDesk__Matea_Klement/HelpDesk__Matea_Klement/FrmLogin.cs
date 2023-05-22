@@ -26,10 +26,6 @@ namespace HelpDesk__Matea_Klement
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
         private void label3_Click(object sender, EventArgs e) {
 
         }
@@ -54,6 +50,22 @@ namespace HelpDesk__Matea_Klement
                 }
             }
 
+
+        }
+
+        private void panelPrijava_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e) {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e) {
 
         }
     }

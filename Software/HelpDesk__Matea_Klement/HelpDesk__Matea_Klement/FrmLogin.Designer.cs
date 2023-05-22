@@ -58,7 +58,7 @@
             this.panelPrijava.Name = "panelPrijava";
             this.panelPrijava.Size = new System.Drawing.Size(526, 41);
             this.panelPrijava.TabIndex = 1;
-            this.panelPrijava.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelPrijava.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrijava_Paint);
             // 
             // panel2
             // 
@@ -79,6 +79,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(174, 22);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -86,6 +87,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(174, 22);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // lblPassword
             // 
@@ -109,6 +111,7 @@
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Korisničko ime";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // btnLogin
             // 

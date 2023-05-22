@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.btnProfilZahtjevi = new System.Windows.Forms.Button();
             this.btnProfilProfil = new System.Windows.Forms.Button();
+            this.btnProfilZahtjevi = new System.Windows.Forms.Button();
             this.lblPodatciProfila = new System.Windows.Forms.Label();
             this.lblProfilUsername = new System.Windows.Forms.Label();
             this.lblProfilEmail = new System.Windows.Forms.Label();
@@ -44,17 +44,7 @@
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(799, 41);
             this.panelProfil.TabIndex = 3;
-            // 
-            // btnProfilZahtjevi
-            // 
-            this.btnProfilZahtjevi.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnProfilZahtjevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProfilZahtjevi.Location = new System.Drawing.Point(149, 3);
-            this.btnProfilZahtjevi.Name = "btnProfilZahtjevi";
-            this.btnProfilZahtjevi.Size = new System.Drawing.Size(161, 35);
-            this.btnProfilZahtjevi.TabIndex = 3;
-            this.btnProfilZahtjevi.Text = "Zahtjevi";
-            this.btnProfilZahtjevi.UseVisualStyleBackColor = false;
+            this.panelProfil.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProfil_Paint);
             // 
             // btnProfilProfil
             // 
@@ -68,11 +58,23 @@
             this.btnProfilProfil.UseVisualStyleBackColor = false;
             this.btnProfilProfil.Click += new System.EventHandler(this.btnProfil_Click);
             // 
+            // btnProfilZahtjevi
+            // 
+            this.btnProfilZahtjevi.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnProfilZahtjevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProfilZahtjevi.Location = new System.Drawing.Point(149, 3);
+            this.btnProfilZahtjevi.Name = "btnProfilZahtjevi";
+            this.btnProfilZahtjevi.Size = new System.Drawing.Size(161, 35);
+            this.btnProfilZahtjevi.TabIndex = 3;
+            this.btnProfilZahtjevi.Text = "Zahtjevi";
+            this.btnProfilZahtjevi.UseVisualStyleBackColor = false;
+            this.btnProfilZahtjevi.Click += new System.EventHandler(this.btnProfilZahtjevi_Click);
+            // 
             // lblPodatciProfila
             // 
             this.lblPodatciProfila.AutoSize = true;
             this.lblPodatciProfila.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPodatciProfila.Location = new System.Drawing.Point(23, 90);
+            this.lblPodatciProfila.Location = new System.Drawing.Point(22, 89);
             this.lblPodatciProfila.Name = "lblPodatciProfila";
             this.lblPodatciProfila.Size = new System.Drawing.Size(159, 27);
             this.lblPodatciProfila.TabIndex = 4;

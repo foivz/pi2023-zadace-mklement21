@@ -18,11 +18,16 @@ namespace HelpDesk__Matea_Klement {
 
         }
 
-        private void label1_Click(object sender, EventArgs e) {
+
+        private void txtPodatciProfila_Click(object sender, EventArgs e) {
 
         }
 
-        private void txtPodatciProfila_Click(object sender, EventArgs e) {
+        private void panelProfil_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void btnProfilZahtjevi_Click(object sender, EventArgs e) {
 
         }
     }
