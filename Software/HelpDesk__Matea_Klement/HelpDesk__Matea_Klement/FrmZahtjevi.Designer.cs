@@ -32,15 +32,17 @@
             this.btnZahtjeviProfil = new System.Windows.Forms.Button();
             this.btnZahtjeviZahtjevi = new System.Windows.Forms.Button();
             this.lblZahtjevi = new System.Windows.Forms.Label();
+            this.btnZahtjeviPocetna = new System.Windows.Forms.Button();
             this.panelZahtjevi.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelZahtjevi
             // 
             this.panelZahtjevi.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelZahtjevi.Controls.Add(this.btnZahtjeviPocetna);
             this.panelZahtjevi.Controls.Add(this.btnZahtjeviProfil);
             this.panelZahtjevi.Controls.Add(this.btnZahtjeviZahtjevi);
-            this.panelZahtjevi.Location = new System.Drawing.Point(0, 26);
+            this.panelZahtjevi.Location = new System.Drawing.Point(0, 16);
             this.panelZahtjevi.Name = "panelZahtjevi";
             this.panelZahtjevi.Size = new System.Drawing.Size(799, 41);
             this.panelZahtjevi.TabIndex = 4;
@@ -50,7 +52,7 @@
             // 
             this.btnZahtjeviProfil.BackColor = System.Drawing.Color.Gainsboro;
             this.btnZahtjeviProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZahtjeviProfil.Location = new System.Drawing.Point(507, 3);
+            this.btnZahtjeviProfil.Location = new System.Drawing.Point(567, 3);
             this.btnZahtjeviProfil.Name = "btnZahtjeviProfil";
             this.btnZahtjeviProfil.Size = new System.Drawing.Size(161, 35);
             this.btnZahtjeviProfil.TabIndex = 4;
@@ -62,7 +64,7 @@
             // 
             this.btnZahtjeviZahtjevi.BackColor = System.Drawing.Color.Gainsboro;
             this.btnZahtjeviZahtjevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZahtjeviZahtjevi.Location = new System.Drawing.Point(149, 3);
+            this.btnZahtjeviZahtjevi.Location = new System.Drawing.Point(315, 3);
             this.btnZahtjeviZahtjevi.Name = "btnZahtjeviZahtjevi";
             this.btnZahtjeviZahtjevi.Size = new System.Drawing.Size(161, 35);
             this.btnZahtjeviZahtjevi.TabIndex = 3;
@@ -74,12 +76,23 @@
             // 
             this.lblZahtjevi.AutoSize = true;
             this.lblZahtjevi.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblZahtjevi.Location = new System.Drawing.Point(22, 89);
+            this.lblZahtjevi.Location = new System.Drawing.Point(33, 94);
             this.lblZahtjevi.Name = "lblZahtjevi";
             this.lblZahtjevi.Size = new System.Drawing.Size(94, 27);
             this.lblZahtjevi.TabIndex = 5;
             this.lblZahtjevi.Text = "Zahtjevi";
             this.lblZahtjevi.Click += new System.EventHandler(this.lblPodatciProfila_Click);
+            // 
+            // btnZahtjeviPocetna
+            // 
+            this.btnZahtjeviPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZahtjeviPocetna.Location = new System.Drawing.Point(63, 3);
+            this.btnZahtjeviPocetna.Name = "btnZahtjeviPocetna";
+            this.btnZahtjeviPocetna.Size = new System.Drawing.Size(161, 35);
+            this.btnZahtjeviPocetna.TabIndex = 7;
+            this.btnZahtjeviPocetna.Text = "Početna";
+            this.btnZahtjeviPocetna.UseVisualStyleBackColor = true;
+            this.btnZahtjeviPocetna.Click += new System.EventHandler(this.btnZahtjeviPocetna_Click);
             // 
             // FrmZahtjevi
             // 
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Button btnZahtjeviProfil;
         private System.Windows.Forms.Button btnZahtjeviZahtjevi;
         private System.Windows.Forms.Label lblZahtjevi;
+        private System.Windows.Forms.Button btnZahtjeviPocetna;
     }
 }

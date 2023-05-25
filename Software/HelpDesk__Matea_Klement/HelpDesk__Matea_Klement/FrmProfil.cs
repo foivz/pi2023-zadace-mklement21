@@ -14,21 +14,25 @@ namespace HelpDesk__Matea_Klement {
             InitializeComponent();
         }
 
-        private void btnProfil_Click(object sender, EventArgs e) {
-
-        }
-
-
-        private void txtPodatciProfila_Click(object sender, EventArgs e) {
-
-        }
-
-        private void panelProfil_Paint(object sender, PaintEventArgs e) {
-
+        private void btnProfilProfil_Click(object sender, EventArgs e) {
+            FrmProfil frmProfilProfil = new FrmProfil();
+            Hide();
+            frmProfilProfil.ShowDialog();
+            Close();
         }
 
         private void btnProfilZahtjevi_Click(object sender, EventArgs e) {
+            FrmZahtjevi frmProfilZahtjevi = new FrmZahtjevi();
+            Hide();
+            frmProfilZahtjevi.ShowDialog();
+            Close();
+        }
 
+        private void btnProfilPocetna_Click(object sender, EventArgs e) {
+            FrmPocetna frmProfilPocetna = new FrmPocetna();
+            Hide();
+            frmProfilPocetna.ShowDialog();
+            Close();
         }
     }
 }

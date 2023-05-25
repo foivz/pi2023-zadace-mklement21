@@ -16,7 +16,7 @@ namespace HelpDesk__Matea_Klement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmPrijava());
         }
     }
 }
