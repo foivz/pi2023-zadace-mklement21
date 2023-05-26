@@ -25,7 +25,7 @@ namespace HelpDesk__Matea_Klement {
             } else if (lozinka == " ") {
                 MessageBox.Show("Niste unijeli lozinku", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
-                if (korisnickoIme == "student" && lozinka == "1234" || korisnickoIme == "profesor" && lozinka == "1234") {
+                if (korisnickoIme == "majakos" && lozinka == "123456" || korisnickoIme == "matijazec" && lozinka == "654321") {
                     FrmPocetna frmPocetna = new FrmPocetna();
 
                     frmPocetna.ShowDialog();
