@@ -74,6 +74,8 @@
     <Compile Include="FrmZahtjevi.Designer.cs">
       <DependentUpon>FrmZahtjevi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\Zahtjev.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmPocetna.resx">
