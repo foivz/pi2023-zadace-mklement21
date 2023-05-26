@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace HelpDesk__Matea_Klement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DB.SetConfiguration("IPS23_mklement21", "mklement21", "3EZTWDk0");
             Application.Run(new FrmPrijava());
         }
     }
