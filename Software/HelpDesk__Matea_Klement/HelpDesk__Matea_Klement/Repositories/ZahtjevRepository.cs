@@ -54,7 +54,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
         }
 
         public static void KreirajZahtjev (Zahtjev zahtjev) {
-            string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum) VALUES ('{zahtjev.ZahtjevNaslov}', '{zahtjev.ZahtjevDatum}')";
+            string sql = $"INSERT INTO Zahtjevi (IdZahtjev, ZahtjevNaslov, Status, ZahtjevDatum) VALUES ({zahtjev.IdZahtjev}, '{zahtjev.ZahtjevNaslov}', '{zahtjev.Status}', GETDATE())";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
