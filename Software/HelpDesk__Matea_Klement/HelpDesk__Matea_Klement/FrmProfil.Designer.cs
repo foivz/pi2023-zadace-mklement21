@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.panelProfil = new System.Windows.Forms.Panel();
+            this.btnProfilPocetna = new System.Windows.Forms.Button();
             this.btnProfilProfil = new System.Windows.Forms.Button();
             this.btnProfilZahtjevi = new System.Windows.Forms.Button();
             this.lblPodatciProfila = new System.Windows.Forms.Label();
@@ -32,7 +33,6 @@
             this.lblProfilBroj = new System.Windows.Forms.Label();
             this.lblProfilTrenutnaZaporka = new System.Windows.Forms.Label();
             this.lblProfilNovaZaporka = new System.Windows.Forms.Label();
-            this.btnProfilPocetna = new System.Windows.Forms.Button();
             this.panelProfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,17 @@
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(799, 41);
             this.panelProfil.TabIndex = 4;
+            // 
+            // btnProfilPocetna
+            // 
+            this.btnProfilPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProfilPocetna.Location = new System.Drawing.Point(63, 3);
+            this.btnProfilPocetna.Name = "btnProfilPocetna";
+            this.btnProfilPocetna.Size = new System.Drawing.Size(161, 35);
+            this.btnProfilPocetna.TabIndex = 11;
+            this.btnProfilPocetna.Text = "Početna";
+            this.btnProfilPocetna.UseVisualStyleBackColor = true;
+            this.btnProfilPocetna.Click += new System.EventHandler(this.btnProfilPocetna_Click);
             // 
             // btnProfilProfil
             // 
@@ -136,17 +147,6 @@
             this.lblProfilNovaZaporka.Text = "Nova zaporka";
             this.lblProfilNovaZaporka.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnProfilPocetna
-            // 
-            this.btnProfilPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProfilPocetna.Location = new System.Drawing.Point(63, 3);
-            this.btnProfilPocetna.Name = "btnProfilPocetna";
-            this.btnProfilPocetna.Size = new System.Drawing.Size(161, 35);
-            this.btnProfilPocetna.TabIndex = 11;
-            this.btnProfilPocetna.Text = "Početna";
-            this.btnProfilPocetna.UseVisualStyleBackColor = true;
-            this.btnProfilPocetna.Click += new System.EventHandler(this.btnProfilPocetna_Click);
-            // 
             // FrmProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +166,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profil korisnika";
+            this.Load += new System.EventHandler(this.FrmProfil_Load);
             this.panelProfil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

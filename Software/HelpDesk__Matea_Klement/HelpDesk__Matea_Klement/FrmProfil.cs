@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelpDesk__Matea_Klement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,10 @@ namespace HelpDesk__Matea_Klement {
             Hide();
             frmProfilPocetna.ShowDialog();
             Close();
+        }
+
+        private void FrmProfil_Load(object sender, EventArgs e) {
+            
         }
     }
 }
