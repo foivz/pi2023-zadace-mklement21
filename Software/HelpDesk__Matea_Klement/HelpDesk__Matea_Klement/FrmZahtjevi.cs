@@ -1,4 +1,5 @@
-﻿using HelpDesk__Matea_Klement.Models;
+﻿using DBLayer;
+using HelpDesk__Matea_Klement.Models;
 using HelpDesk__Matea_Klement.Repositories;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,10 @@ namespace HelpDesk__Matea_Klement
         private void ShowZahtjevi() {
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
+            dgvZahtjevi.Columns["IdZahtjev"].DisplayIndex = 0;
+            dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;
+            dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
+            dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
             
 
             /*
@@ -74,6 +79,25 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
             dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
             */
+        }
+
+        
+        private void txtPretrazi_TextChanged(object sender, EventArgs e) {
+           /* if (txtPretrazi.Text != "") {
+                string pretraziZahtjev = txtPretrazi.Text;
+                RezultatiPretrazivanja(pretraziZahtjev);
+            }*/
+        }
+        private void RezultatiPretrazivanja (string ZahtjevNaslov ) {
+        }
+        
+
+        private void btnKreirajZahtjev_Click(object sender, EventArgs e) {
+            Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            if (selectedZahtjev != null) {
+                FrmKreirajZahtjev frmKreirajZahtjev = new FrmKreirajZahtjev(selectedZahtjev);
+                frmKreirajZahtjev.ShowDialog();
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
                 reader.Close();
             } //if
             DB.CloseConnection();
-            return korisnik;
+            return FetchKorisnik(sql);
         }
 
         public static List<Korisnik> GetKorisnici() {
@@ -42,12 +42,38 @@ namespace HelpDesk__Matea_Klement.Repositories {
             int id = int.Parse(reader["IdKorisnik"].ToString());
             string ime = reader["Ime"].ToString();
             string prezime = reader["Prezime"].ToString();
+            string korisnickoIme = reader["KorisnickoIme"].ToString();
+            string broj = reader["BrojMobitela"].ToString();
+            string lozinka = reader["Lozinka"].ToString();
+
 
             var korisnik = new Korisnik {
                 IdKorisnik = id,
                 Ime = ime,
-                Prezime = prezime
+                Prezime = prezime,
+                KorisnickoIme = korisnickoIme,
+                BrojMobitela = broj,
+                Lozinka = lozinka
             };
+            return korisnik;
+        }
+
+        
+        public static Korisnik GetKorisnik (string korisnickoIme) {
+            string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnickoIme}'";
+            return FetchKorisnik(sql);
+        }
+
+        private static Korisnik FetchKorisnik(string sql) {
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            Korisnik korisnik = null;
+            if (reader.HasRows == true) {
+                reader.Read();
+                korisnik = CreateObject(reader);
+                reader.Close();
+            }
+            DB.CloseConnection();
             return korisnik;
         }
     }

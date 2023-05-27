@@ -1,9 +1,12 @@
-﻿using System;
+﻿using HelpDesk__Matea_Klement.Models;
+using HelpDesk__Matea_Klement.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +18,8 @@ namespace HelpDesk__Matea_Klement {
         }
 
         private void btnPrijava_Click(object sender, EventArgs e) {
+
+
             string korisnickoIme = txtKorisnickoIme.Text;
             string lozinka = txtLozinka.Text;
 

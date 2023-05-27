@@ -34,6 +34,12 @@
             this.btnZahtjeviZahtjevi = new System.Windows.Forms.Button();
             this.lblZahtjevi = new System.Windows.Forms.Label();
             this.dgvZahtjevi = new System.Windows.Forms.DataGridView();
+            this.lblBrojZahtjeva = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblDatum = new System.Windows.Forms.Label();
+            this.txtPretrazi = new System.Windows.Forms.TextBox();
+            this.btnKreirajZahtjev = new System.Windows.Forms.Button();
             this.panelZahtjevi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
@@ -91,9 +97,9 @@
             this.lblZahtjevi.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblZahtjevi.Location = new System.Drawing.Point(33, 94);
             this.lblZahtjevi.Name = "lblZahtjevi";
-            this.lblZahtjevi.Size = new System.Drawing.Size(94, 27);
+            this.lblZahtjevi.Size = new System.Drawing.Size(202, 27);
             this.lblZahtjevi.TabIndex = 5;
-            this.lblZahtjevi.Text = "Zahtjevi";
+            this.lblZahtjevi.Text = "Podneseni zahtjevi";
             this.lblZahtjevi.Click += new System.EventHandler(this.lblPodatciProfila_Click);
             // 
             // dgvZahtjevi
@@ -102,19 +108,93 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZahtjevi.Location = new System.Drawing.Point(63, 162);
+            this.dgvZahtjevi.ColumnHeadersVisible = false;
+            this.dgvZahtjevi.Location = new System.Drawing.Point(63, 181);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
             this.dgvZahtjevi.RowHeadersWidth = 51;
             this.dgvZahtjevi.RowTemplate.Height = 24;
             this.dgvZahtjevi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvZahtjevi.Size = new System.Drawing.Size(665, 160);
+            this.dgvZahtjevi.Size = new System.Drawing.Size(621, 160);
             this.dgvZahtjevi.TabIndex = 6;
+            // 
+            // lblBrojZahtjeva
+            // 
+            this.lblBrojZahtjeva.AutoSize = true;
+            this.lblBrojZahtjeva.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblBrojZahtjeva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblBrojZahtjeva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblBrojZahtjeva.Location = new System.Drawing.Point(135, 160);
+            this.lblBrojZahtjeva.Name = "lblBrojZahtjeva";
+            this.lblBrojZahtjeva.Size = new System.Drawing.Size(108, 20);
+            this.lblBrojZahtjeva.TabIndex = 7;
+            this.lblBrojZahtjeva.Text = "Broj zahtjeva";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(294, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Naslov";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblStatus.Location = new System.Drawing.Point(426, 160);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(58, 20);
+            this.lblStatus.TabIndex = 9;
+            this.lblStatus.Text = "Status";
+            // 
+            // lblDatum
+            // 
+            this.lblDatum.AutoSize = true;
+            this.lblDatum.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblDatum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDatum.Location = new System.Drawing.Point(532, 160);
+            this.lblDatum.Name = "lblDatum";
+            this.lblDatum.Size = new System.Drawing.Size(129, 20);
+            this.lblDatum.TabIndex = 10;
+            this.lblDatum.Text = "Datum kreiranja";
+            // 
+            // txtPretrazi
+            // 
+            this.txtPretrazi.Location = new System.Drawing.Point(547, 99);
+            this.txtPretrazi.Name = "txtPretrazi";
+            this.txtPretrazi.Size = new System.Drawing.Size(137, 22);
+            this.txtPretrazi.TabIndex = 11;
+            this.txtPretrazi.Text = "Pretraživanje";
+            this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged);
+            // 
+            // btnKreirajZahtjev
+            // 
+            this.btnKreirajZahtjev.Location = new System.Drawing.Point(567, 347);
+            this.btnKreirajZahtjev.Name = "btnKreirajZahtjev";
+            this.btnKreirajZahtjev.Size = new System.Drawing.Size(117, 23);
+            this.btnKreirajZahtjev.TabIndex = 12;
+            this.btnKreirajZahtjev.Text = "Kreiraj zahtjev";
+            this.btnKreirajZahtjev.UseVisualStyleBackColor = true;
+            this.btnKreirajZahtjev.Click += new System.EventHandler(this.btnKreirajZahtjev_Click);
             // 
             // FrmZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnKreirajZahtjev);
+            this.Controls.Add(this.txtPretrazi);
+            this.Controls.Add(this.lblDatum);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBrojZahtjeva);
             this.Controls.Add(this.dgvZahtjevi);
             this.Controls.Add(this.lblZahtjevi);
             this.Controls.Add(this.panelZahtjevi);
@@ -141,5 +221,11 @@
         private System.Windows.Forms.Label lblZahtjevi;
         private System.Windows.Forms.Button btnZahtjeviPocetna;
         private System.Windows.Forms.DataGridView dgvZahtjevi;
+        private System.Windows.Forms.Label lblBrojZahtjeva;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblDatum;
+        private System.Windows.Forms.TextBox txtPretrazi;
+        private System.Windows.Forms.Button btnKreirajZahtjev;
     }
 }

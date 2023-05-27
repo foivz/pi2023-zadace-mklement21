@@ -1,8 +1,11 @@
-﻿using HelpDesk__Matea_Klement.Models;
+﻿using DBLayer;
+using HelpDesk__Matea_Klement.Models;
+using HelpDesk__Matea_Klement.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,7 +40,12 @@ namespace HelpDesk__Matea_Klement {
         }
 
         private void FrmProfil_Load(object sender, EventArgs e) {
-            
+            var activities = KorisnikRepository.GetKorisnik(4);
+
+            txtImePrezime.Text = activities.ToString();
+            txtBroj.Text = activities.BrojMobitela;
+            txtTrenutnaZaporka.Text = activities.Lozinka;
+            txtKorisnickoIme.Text = activities.KorisnickoIme;
         }
     }
 }
