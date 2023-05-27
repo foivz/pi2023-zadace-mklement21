@@ -52,5 +52,12 @@ namespace HelpDesk__Matea_Klement.Repositories {
             }; //spajanje sa Zahtjev.cs
             return zahtjev;
         }
+
+        public static void KreirajZahtjev (Zahtjev zahtjev) {
+            string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum) VALUES ('{zahtjev.ZahtjevNaslov}', '{zahtjev.ZahtjevDatum}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }

@@ -47,5 +47,13 @@ namespace HelpDesk__Matea_Klement {
             txtTrenutnaZaporka.Text = activities.Lozinka;
             txtKorisnickoIme.Text = activities.KorisnickoIme;
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e) {
+            FrmProfil form = new FrmProfil();
+            this.Visible = false;
+            form.ShowDialog();
+            this.Close();
+            Close();
+        }
     }
 }

@@ -38,6 +38,8 @@
             this.txtNovaZaporka = new System.Windows.Forms.TextBox();
             this.lblKorisnickoIme = new System.Windows.Forms.Label();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnSpremi = new System.Windows.Forms.Button();
             this.panelProfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,6 +160,7 @@
             // txtTrenutnaZaporka
             // 
             this.txtTrenutnaZaporka.Location = new System.Drawing.Point(185, 330);
+            this.txtTrenutnaZaporka.MaxLength = 6;
             this.txtTrenutnaZaporka.Name = "txtTrenutnaZaporka";
             this.txtTrenutnaZaporka.PasswordChar = '*';
             this.txtTrenutnaZaporka.Size = new System.Drawing.Size(168, 22);
@@ -188,11 +191,32 @@
             this.txtKorisnickoIme.Size = new System.Drawing.Size(168, 22);
             this.txtKorisnickoIme.TabIndex = 17;
             // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(539, 378);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(89, 23);
+            this.btnOdustani.TabIndex = 18;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
+            // btnSpremi
+            // 
+            this.btnSpremi.Location = new System.Drawing.Point(653, 378);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnSpremi.TabIndex = 19;
+            this.btnSpremi.Text = "Spremi";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            // 
             // FrmProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSpremi);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.lblKorisnickoIme);
             this.Controls.Add(this.txtNovaZaporka);
@@ -236,5 +260,7 @@
         private System.Windows.Forms.TextBox txtNovaZaporka;
         private System.Windows.Forms.Label lblKorisnickoIme;
         private System.Windows.Forms.TextBox txtKorisnickoIme;
+        private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button btnSpremi;
     }
 }
