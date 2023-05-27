@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panelZahtjevi = new System.Windows.Forms.Panel();
+            this.btnZahtjeviPocetna = new System.Windows.Forms.Button();
             this.btnZahtjeviProfil = new System.Windows.Forms.Button();
             this.btnZahtjeviZahtjevi = new System.Windows.Forms.Button();
             this.lblZahtjevi = new System.Windows.Forms.Label();
-            this.btnZahtjeviPocetna = new System.Windows.Forms.Button();
+            this.dgvZahtjevi = new System.Windows.Forms.DataGridView();
             this.panelZahtjevi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
             // panelZahtjevi
@@ -47,6 +49,17 @@
             this.panelZahtjevi.Size = new System.Drawing.Size(799, 41);
             this.panelZahtjevi.TabIndex = 4;
             this.panelZahtjevi.Paint += new System.Windows.Forms.PaintEventHandler(this.panelZahtjevi_Paint);
+            // 
+            // btnZahtjeviPocetna
+            // 
+            this.btnZahtjeviPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZahtjeviPocetna.Location = new System.Drawing.Point(63, 3);
+            this.btnZahtjeviPocetna.Name = "btnZahtjeviPocetna";
+            this.btnZahtjeviPocetna.Size = new System.Drawing.Size(161, 35);
+            this.btnZahtjeviPocetna.TabIndex = 7;
+            this.btnZahtjeviPocetna.Text = "Početna";
+            this.btnZahtjeviPocetna.UseVisualStyleBackColor = true;
+            this.btnZahtjeviPocetna.Click += new System.EventHandler(this.btnZahtjeviPocetna_Click);
             // 
             // btnZahtjeviProfil
             // 
@@ -83,22 +96,26 @@
             this.lblZahtjevi.Text = "Zahtjevi";
             this.lblZahtjevi.Click += new System.EventHandler(this.lblPodatciProfila_Click);
             // 
-            // btnZahtjeviPocetna
+            // dgvZahtjevi
             // 
-            this.btnZahtjeviPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZahtjeviPocetna.Location = new System.Drawing.Point(63, 3);
-            this.btnZahtjeviPocetna.Name = "btnZahtjeviPocetna";
-            this.btnZahtjeviPocetna.Size = new System.Drawing.Size(161, 35);
-            this.btnZahtjeviPocetna.TabIndex = 7;
-            this.btnZahtjeviPocetna.Text = "Početna";
-            this.btnZahtjeviPocetna.UseVisualStyleBackColor = true;
-            this.btnZahtjeviPocetna.Click += new System.EventHandler(this.btnZahtjeviPocetna_Click);
+            this.dgvZahtjevi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvZahtjevi.Location = new System.Drawing.Point(63, 162);
+            this.dgvZahtjevi.Name = "dgvZahtjevi";
+            this.dgvZahtjevi.RowHeadersWidth = 51;
+            this.dgvZahtjevi.RowTemplate.Height = 24;
+            this.dgvZahtjevi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvZahtjevi.Size = new System.Drawing.Size(665, 160);
+            this.dgvZahtjevi.TabIndex = 6;
             // 
             // FrmZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvZahtjevi);
             this.Controls.Add(this.lblZahtjevi);
             this.Controls.Add(this.panelZahtjevi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -108,7 +125,9 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zahtjevi";
+            this.Load += new System.EventHandler(this.FrmZahtjevi_Load);
             this.panelZahtjevi.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +140,6 @@
         private System.Windows.Forms.Button btnZahtjeviZahtjevi;
         private System.Windows.Forms.Label lblZahtjevi;
         private System.Windows.Forms.Button btnZahtjeviPocetna;
+        private System.Windows.Forms.DataGridView dgvZahtjevi;
     }
 }

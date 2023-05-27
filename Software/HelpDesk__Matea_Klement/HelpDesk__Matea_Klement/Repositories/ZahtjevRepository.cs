@@ -11,7 +11,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
     public class ZahtjevRepository {
         public static Zahtjev GetZahtjevi(int id) {
             Zahtjev zahtjev = null;
-            string sql = $"SLECT * FROM Zahtjevi WHERE IdZahtjev = {id}";
+            string sql = $"SELECT * FROM Zahtjevi WHERE IdZahtjev = {id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows) {
@@ -29,7 +29,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
 
-            while (reader.HasRows) {
+            while (reader.Read()) {
                 Zahtjev zahtjev = CreateObject(reader);
                 zahtjevi.Add(zahtjev);
             }

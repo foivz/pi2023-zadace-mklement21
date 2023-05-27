@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HelpDesk__Matea_Klement.Models;
+using HelpDesk__Matea_Klement.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +46,34 @@ namespace HelpDesk__Matea_Klement
             Hide();
             frmZahtjeviPocetna.ShowDialog();
             Close();
+        }
+
+        //dohvaćanje zahtjeva
+        private void FrmZahtjevi_Load(object sender, EventArgs e) {
+            ShowZahtjevi();
+        } 
+
+        private void ShowZahtjevi() {
+            List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
+            dgvZahtjevi.DataSource = zahtjevi;
+            
+
+            /*
+            var zahtjevi = ZahtjevRepository.GetZahtjevi();
+            dgvZahtjevi.DataSource = zahtjevi;
+
+            dgvZahtjevi.Columns["IdZahtjev"].HeaderCell.Value = "Šifra";
+            dgvZahtjevi.Columns["ZahtjevNaslov"].HeaderCell.Value = "Šifra";
+            dgvZahtjevi.Columns["Status"].HeaderCell.Value = "Šifra";
+            dgvZahtjevi.Columns["ZahtjevDatum"].HeaderCell.Value = "Šifra";
+
+
+            /*
+            dgvZahtjevi.Columns["IdZahtjev"].DisplayIndex = 0;
+            dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;
+            dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
+            dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
+            */
         }
     }
 }
