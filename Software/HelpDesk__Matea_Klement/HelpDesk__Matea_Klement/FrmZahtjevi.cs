@@ -98,8 +98,8 @@ namespace HelpDesk__Matea_Klement
             this.Close();
         }
 
-        //pretrazivanje zahtjeva (ne radi)
-        private void txtPretrazi_TextChanged(object sender, EventArgs e) {
+        //pretrazivanje zahtjeva 
+        private void txtPretrazi_TextChanged_1(object sender, EventArgs e) {
             var pretrazivaniZahtjev = ZahtjevRepository.GetSearchedZahtjev(txtPretrazi.Text);
             dgvZahtjevi.DataSource = pretrazivaniZahtjev;
 
@@ -109,6 +109,5 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
             dgvZahtjevi.Columns["ZahtjevOpis"].DisplayIndex = 4;
         }
-
     }
 }

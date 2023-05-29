@@ -89,8 +89,23 @@ namespace HelpDesk__Matea_Klement.Repositories {
         }
         */
         public static List<Zahtjev> GetSearchedZahtjev(string naziv) {
+            List<Zahtjev> pretrazivaniZahtjev = new List<Zahtjev>();
+            DB.OpenConnection();
+            foreach (Zahtjev zahtjev in pretrazivaniZahtjev) {
+                string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov LIKE '{naziv}'";
+                var reader = DB.GetDataReader(sql);
+                while (reader.Read()) {
+                    Zahtjev trazeniZahtjev = CreateObject(reader);
+                    pretrazivaniZahtjev.Add(zahtjev);
+                }
+                reader.Close();
+            }
+            DB.CloseConnection();
+            return pretrazivaniZahtjev;
+            /*
             List<Zahtjev> zahtjev = new List<Zahtjev>();
-            string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaziv = {naziv}";
+            string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov = '{naziv}'";
+            //string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaziv = {naziv}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.Read()) {
@@ -100,7 +115,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             reader.Close();
             DB.CloseConnection();
             return zahtjev;
+            */
         }
-
     }
 }

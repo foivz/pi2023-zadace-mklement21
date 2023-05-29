@@ -115,11 +115,11 @@
             // 
             // txtPretrazi
             // 
-            this.txtPretrazi.Location = new System.Drawing.Point(637, 99);
+            this.txtPretrazi.Location = new System.Drawing.Point(567, 99);
             this.txtPretrazi.Name = "txtPretrazi";
-            this.txtPretrazi.Size = new System.Drawing.Size(137, 22);
+            this.txtPretrazi.Size = new System.Drawing.Size(207, 22);
             this.txtPretrazi.TabIndex = 11;
-            this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged);
+            this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged_1);
             // 
             // btnKreirajZahtjev
             // 
