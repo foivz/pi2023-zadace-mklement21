@@ -54,6 +54,7 @@ namespace HelpDesk__Matea_Klement
             ShowZahtjevi();
         } 
 
+        //prikaz podnesenih zahtjeva
         private void ShowZahtjevi() {
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
@@ -74,24 +75,9 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["ZahtjevNaslov"].Width = 130;
             dgvZahtjevi.Columns["ZahtjevDatum"].Width = 70;
             dgvZahtjevi.Columns["ZahtjevOpis"].Width = 200;
-            /*
-            var zahtjevi = ZahtjevRepository.GetZahtjevi();
-            dgvZahtjevi.DataSource = zahtjevi;
-
-            dgvZahtjevi.Columns["IdZahtjev"].HeaderCell.Value = "Šifra";
-            dgvZahtjevi.Columns["ZahtjevNaslov"].HeaderCell.Value = "Šifra";
-            dgvZahtjevi.Columns["Status"].HeaderCell.Value = "Šifra";
-            dgvZahtjevi.Columns["ZahtjevDatum"].HeaderCell.Value = "Šifra";
-
-
-            /*
-            dgvZahtjevi.Columns["IdZahtjev"].DisplayIndex = 0;
-            dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;
-            dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
-            dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
-            */
         }
 
+        //odlazak na izradu zahtjeva
         private void btnKreirajZahtjev_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -100,6 +86,7 @@ namespace HelpDesk__Matea_Klement
             }
         }
 
+        //brisanje zahtjeva
         private void btnObrisi_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -111,9 +98,16 @@ namespace HelpDesk__Matea_Klement
             this.Close();
         }
 
+        //pretrazivanje zahtjeva (ne radi)
         private void txtPretrazi_TextChanged(object sender, EventArgs e) {
-            
+            var pretrazivaniZahtjev = ZahtjevRepository.GetSearchedZahtjev(txtPretrazi.Text);
+            dgvZahtjevi.DataSource = pretrazivaniZahtjev;
 
+            dgvZahtjevi.Columns["IdZahtjev"].DisplayIndex = 0;
+            dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;
+            dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
+            dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
+            dgvZahtjevi.Columns["ZahtjevOpis"].DisplayIndex = 4;
         }
 
     }

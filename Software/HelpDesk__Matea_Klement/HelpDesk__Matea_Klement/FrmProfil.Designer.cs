@@ -31,11 +31,9 @@
             this.lblImePrezime = new System.Windows.Forms.Label();
             this.lblProfilBroj = new System.Windows.Forms.Label();
             this.lblProfilTrenutnaZaporka = new System.Windows.Forms.Label();
-            this.lblProfilNovaZaporka = new System.Windows.Forms.Label();
             this.txtImePrezime = new System.Windows.Forms.TextBox();
             this.txtBroj = new System.Windows.Forms.TextBox();
             this.txtTrenutnaZaporka = new System.Windows.Forms.TextBox();
-            this.txtNovaZaporka = new System.Windows.Forms.TextBox();
             this.lblKorisnickoIme = new System.Windows.Forms.Label();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.btnOdustani = new System.Windows.Forms.Button();
@@ -132,17 +130,6 @@
             this.lblProfilTrenutnaZaporka.Text = "Trenutna zaporka";
             this.lblProfilTrenutnaZaporka.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblProfilNovaZaporka
-            // 
-            this.lblProfilNovaZaporka.AutoSize = true;
-            this.lblProfilNovaZaporka.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProfilNovaZaporka.Location = new System.Drawing.Point(35, 382);
-            this.lblProfilNovaZaporka.Name = "lblProfilNovaZaporka";
-            this.lblProfilNovaZaporka.Size = new System.Drawing.Size(104, 19);
-            this.lblProfilNovaZaporka.TabIndex = 10;
-            this.lblProfilNovaZaporka.Text = "Nova zaporka";
-            this.lblProfilNovaZaporka.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // txtImePrezime
             // 
             this.txtImePrezime.Location = new System.Drawing.Point(185, 153);
@@ -165,13 +152,6 @@
             this.txtTrenutnaZaporka.PasswordChar = '*';
             this.txtTrenutnaZaporka.Size = new System.Drawing.Size(168, 22);
             this.txtTrenutnaZaporka.TabIndex = 14;
-            // 
-            // txtNovaZaporka
-            // 
-            this.txtNovaZaporka.Location = new System.Drawing.Point(185, 379);
-            this.txtNovaZaporka.Name = "txtNovaZaporka";
-            this.txtNovaZaporka.Size = new System.Drawing.Size(168, 22);
-            this.txtNovaZaporka.TabIndex = 15;
             // 
             // lblKorisnickoIme
             // 
@@ -220,11 +200,9 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.lblKorisnickoIme);
-            this.Controls.Add(this.txtNovaZaporka);
             this.Controls.Add(this.txtTrenutnaZaporka);
             this.Controls.Add(this.txtBroj);
             this.Controls.Add(this.txtImePrezime);
-            this.Controls.Add(this.lblProfilNovaZaporka);
             this.Controls.Add(this.lblProfilTrenutnaZaporka);
             this.Controls.Add(this.lblProfilBroj);
             this.Controls.Add(this.lblImePrezime);
@@ -253,12 +231,10 @@
         private System.Windows.Forms.Label lblImePrezime;
         private System.Windows.Forms.Label lblProfilBroj;
         private System.Windows.Forms.Label lblProfilTrenutnaZaporka;
-        private System.Windows.Forms.Label lblProfilNovaZaporka;
         private System.Windows.Forms.Button btnProfilPocetna;
         private System.Windows.Forms.TextBox txtImePrezime;
         private System.Windows.Forms.TextBox txtBroj;
         private System.Windows.Forms.TextBox txtTrenutnaZaporka;
-        private System.Windows.Forms.TextBox txtNovaZaporka;
         private System.Windows.Forms.Label lblKorisnickoIme;
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Button btnOdustani;

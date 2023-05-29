@@ -10,10 +10,9 @@ using System.Threading.Tasks;
 namespace HelpDesk__Matea_Klement.Repositories {
     public class KorisnikRepository {
 
+        /*
         public static Korisnik GetKorisnikPrijava(string korisnicko) {
-
             Korisnik korisnik = null;
-
             string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnicko}'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
@@ -25,7 +24,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
             return FetchKorisnik(sql);
         }
-
+        */
         
         public static Korisnik GetKorisnik(int id) {
             Korisnik korisnik = null;
@@ -41,9 +40,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
             return FetchKorisnik(sql);
         }
-
-        
-
+        /*
         public static List<Korisnik> GetKorisnici() {
             List<Korisnik> korisnici = new List<Korisnik>();
             string sql = $"SELECT * FROM Korisnici";
@@ -56,7 +53,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             reader.Close();
             DB.CloseConnection();
             return korisnici;
-        }
+        }*/
 
         private static Korisnik CreateObject (SqlDataReader reader) {
             int id = int.Parse(reader["IdKorisnik"].ToString());
@@ -113,7 +110,5 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
-
-
     }
 }
