@@ -9,22 +9,6 @@ using System.Threading.Tasks;
 
 namespace HelpDesk__Matea_Klement.Repositories {
     public class ZahtjevRepository {
-        /*
-        public static Zahtjev GetZahtjevi(int id) {
-            Zahtjev zahtjev = null;
-            string sql = $"SELECT * FROM Zahtjevi WHERE IdZahtjev = {id}";
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            if (reader.HasRows) {
-                reader.Read();
-                zahtjev = CreateObject(reader);
-                reader.Close();
-            }
-            DB.CloseConnection();
-            return zahtjev;
-        }
-        */
-
         public static List<Zahtjev> GetZahtjevi() {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
             string sql = "SELECT * FROM Zahtjevi";
@@ -71,51 +55,20 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
         }
 
-        /*
-        public static List<Zahtjev> GetSearchedZahtjev(List<Zahtjev> zahtjevi) {
-            List<Zahtjev> pretrazivaniZahtjev = new List<Zahtjev>();
-            DB.OpenConnection();
-            foreach (Zahtjev zahtjev in zahtjevi) {
-                string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov = {zahtjev.ZahtjevNaslov}";
-                var reader = DB.GetDataReader(sql);
-                while (reader.Read()) {
-                    Zahtjev trazeniZahtjev = CreateObject(reader);
-                    pretrazivaniZahtjev.Add(zahtjev);
-                }
-                reader.Close();
-            }
-            DB.CloseConnection();
-            return pretrazivaniZahtjev;
-        }
-        */
+        //pretrazivanje
         public static List<Zahtjev> GetSearchedZahtjev(string naziv) {
             List<Zahtjev> pretrazivaniZahtjev = new List<Zahtjev>();
-            DB.OpenConnection();
-            foreach (Zahtjev zahtjev in pretrazivaniZahtjev) {
-                string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov LIKE '{naziv}'";
-                var reader = DB.GetDataReader(sql);
-                while (reader.Read()) {
-                    Zahtjev trazeniZahtjev = CreateObject(reader);
-                    pretrazivaniZahtjev.Add(zahtjev);
-                }
-                reader.Close();
-            }
-            DB.CloseConnection();
-            return pretrazivaniZahtjev;
-            /*
-            List<Zahtjev> zahtjev = new List<Zahtjev>();
-            string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov = '{naziv}'";
-            //string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaziv = {naziv}";
+            string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov LIKE '%{naziv}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
-            if (reader.Read()) {
-                Zahtjev pretrazivani = CreateObject(reader);
-                zahtjev.Add(pretrazivani);
+            while (reader.Read()) {
+                Zahtjev zahtjev = CreateObject(reader);
+                pretrazivaniZahtjev.Add(zahtjev);
             }
             reader.Close();
             DB.CloseConnection();
-            return zahtjev;
-            */
+            return pretrazivaniZahtjev;
+
         }
     }
 }
