@@ -9,6 +9,9 @@ namespace HelpDesk__Matea_Klement.Models {
         public int IdZahtjev { get; set; }
         public string ZahtjevNaslov { get; set; }
         public string Status { get; set; }
+        public string ZahtjevOpis { get; set; }
         public DateTime ZahtjevDatum { get; set; }
+
+       
     }
 }

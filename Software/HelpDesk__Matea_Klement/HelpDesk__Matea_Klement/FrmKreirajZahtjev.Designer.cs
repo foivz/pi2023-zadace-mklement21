@@ -32,7 +32,6 @@
             this.btnKreiranjeOdustani = new System.Windows.Forms.Button();
             this.lblNoviDatum = new System.Windows.Forms.Label();
             this.dtpNoviDatum = new System.Windows.Forms.DateTimePicker();
-            this.txtNoviID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNoviZahtjev
@@ -68,7 +67,7 @@
             this.txtNoviOpis.Location = new System.Drawing.Point(36, 193);
             this.txtNoviOpis.Multiline = true;
             this.txtNoviOpis.Name = "txtNoviOpis";
-            this.txtNoviOpis.Size = new System.Drawing.Size(198, 79);
+            this.txtNoviOpis.Size = new System.Drawing.Size(274, 79);
             this.txtNoviOpis.TabIndex = 9;
             // 
             // txtNoviNaslov
@@ -80,7 +79,7 @@
             // 
             // btnKreiranjeSpremi
             // 
-            this.btnKreiranjeSpremi.Location = new System.Drawing.Point(503, 249);
+            this.btnKreiranjeSpremi.Location = new System.Drawing.Point(457, 249);
             this.btnKreiranjeSpremi.Name = "btnKreiranjeSpremi";
             this.btnKreiranjeSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnKreiranjeSpremi.TabIndex = 11;
@@ -90,7 +89,7 @@
             // 
             // btnKreiranjeOdustani
             // 
-            this.btnKreiranjeOdustani.Location = new System.Drawing.Point(390, 249);
+            this.btnKreiranjeOdustani.Location = new System.Drawing.Point(347, 249);
             this.btnKreiranjeOdustani.Name = "btnKreiranjeOdustani";
             this.btnKreiranjeOdustani.Size = new System.Drawing.Size(85, 23);
             this.btnKreiranjeOdustani.TabIndex = 12;
@@ -114,19 +113,11 @@
             this.dtpNoviDatum.Size = new System.Drawing.Size(159, 22);
             this.dtpNoviDatum.TabIndex = 15;
             // 
-            // txtNoviID
-            // 
-            this.txtNoviID.Location = new System.Drawing.Point(254, 77);
-            this.txtNoviID.Name = "txtNoviID";
-            this.txtNoviID.Size = new System.Drawing.Size(100, 22);
-            this.txtNoviID.TabIndex = 16;
-            // 
             // FrmKreirajZahtjev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 304);
-            this.Controls.Add(this.txtNoviID);
+            this.ClientSize = new System.Drawing.Size(559, 287);
             this.Controls.Add(this.dtpNoviDatum);
             this.Controls.Add(this.lblNoviDatum);
             this.Controls.Add(this.btnKreiranjeOdustani);
@@ -159,6 +150,5 @@
         private System.Windows.Forms.Button btnKreiranjeOdustani;
         private System.Windows.Forms.Label lblNoviDatum;
         private System.Windows.Forms.DateTimePicker dtpNoviDatum;
-        private System.Windows.Forms.TextBox txtNoviID;
     }
 }

@@ -61,6 +61,7 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;
             dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
             dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
+            dgvZahtjevi.Columns["ZahtjevOpis"].DisplayIndex = 4;
             
 
             /*
@@ -83,12 +84,7 @@ namespace HelpDesk__Matea_Klement
 
         
         private void txtPretrazi_TextChanged(object sender, EventArgs e) {
-           /* if (txtPretrazi.Text != "") {
-                string pretraziZahtjev = txtPretrazi.Text;
-                RezultatiPretrazivanja(pretraziZahtjev);
-            }*/
-        }
-        private void RezultatiPretrazivanja (string ZahtjevNaslov ) {
+            //var trazeniZahtjev = ZahtjevRepository.GetSearchedZahtjev()
         }
         
 

@@ -33,9 +33,10 @@ namespace HelpDesk__Matea_Klement {
         private void btnKreiranjeSpremi_Click(object sender, EventArgs e) {
             Zahtjev noviZahtjev = new Zahtjev {
                 ZahtjevNaslov = txtNoviNaslov.Text,
-                IdZahtjev = int.Parse(txtNoviID.Text),
+                //IdZahtjev = int.Parse(txtNoviID.Text),
                 ZahtjevDatum = dtpNoviDatum.Value,
-                Status = txtNoviOpis.Text,
+                //Status = default,
+                ZahtjevOpis = txtNoviOpis.Text,
             };
 
             ZahtjevRepository zahtjev = new ZahtjevRepository();

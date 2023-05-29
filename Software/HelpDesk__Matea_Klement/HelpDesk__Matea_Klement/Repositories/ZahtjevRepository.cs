@@ -21,7 +21,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             }
             DB.CloseConnection();
             return zahtjev;
-        } 
+        }
 
         public static List<Zahtjev> GetZahtjevi() {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
@@ -43,18 +43,20 @@ namespace HelpDesk__Matea_Klement.Repositories {
             string naslov = reader["ZahtjevNaslov"].ToString();
             string status = reader["Status"].ToString();
             DateTime datum = DateTime.Parse(reader["ZahtjevDatum"].ToString());
+            string opis = reader["ZahtjevOpis"].ToString();
 
             var zahtjev = new Zahtjev {
                 IdZahtjev = id,
                 ZahtjevNaslov = naslov,
                 Status = status,
+                ZahtjevOpis = opis,
                 ZahtjevDatum = datum
             }; //spajanje sa Zahtjev.cs
             return zahtjev;
         }
 
         public static void KreirajZahtjev (Zahtjev zahtjev) {
-            string sql = $"INSERT INTO Zahtjevi (IdZahtjev, ZahtjevNaslov, Status, ZahtjevDatum) VALUES ({zahtjev.IdZahtjev}, '{zahtjev.ZahtjevNaslov}', '{zahtjev.Status}', GETDATE())";
+            string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum, ZahtjevOpis) VALUES ('{zahtjev.ZahtjevNaslov}', GETDATE(), '{zahtjev.ZahtjevOpis}')";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
@@ -66,5 +68,21 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
+        public static List<Zahtjev> GetSearchedZahtjev(List<Zahtjev> zahtjevi) {
+            List<Zahtjev> pretrazivaniZahtjev = new List<Zahtjev>();
+            DB.OpenConnection();
+            foreach (Zahtjev zahtjev in zahtjevi) {
+                string sql = $"SELECT * FROM Zahtjevi WHERE IdZahtjev = {zahtjev.IdZahtjev}";
+                var reader = DB.GetDataReader(sql);
+                while (reader.Read()) {
+                    Zahtjev trazeniZahtjev = CreateObject(reader);
+                    pretrazivaniZahtjev.Add(zahtjev);
+                }
+                reader.Close();
+            }
+            DB.CloseConnection();
+            return pretrazivaniZahtjev;
+        }
+
     }
 }
