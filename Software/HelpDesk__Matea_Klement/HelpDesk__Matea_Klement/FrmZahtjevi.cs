@@ -62,8 +62,18 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["Status"].DisplayIndex = 2;
             dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
             dgvZahtjevi.Columns["ZahtjevOpis"].DisplayIndex = 4;
-            
 
+            dgvZahtjevi.Columns["IdZahtjev"].HeaderCell.Value = "Br.";
+            dgvZahtjevi.Columns["ZahtjevNaslov"].HeaderCell.Value = "Naslov";
+            dgvZahtjevi.Columns["Status"].HeaderCell.Value = "Status";
+            dgvZahtjevi.Columns["ZahtjevDatum"].HeaderCell.Value = "Datum";
+            dgvZahtjevi.Columns["ZahtjevOpis"].HeaderCell.Value = "Opis zahtjeva";
+            dgvZahtjevi.GridColor = Color.DeepSkyBlue;
+
+            dgvZahtjevi.Columns["IdZahtjev"].Width = 30;
+            dgvZahtjevi.Columns["ZahtjevNaslov"].Width = 130;
+            dgvZahtjevi.Columns["ZahtjevDatum"].Width = 70;
+            dgvZahtjevi.Columns["ZahtjevOpis"].Width = 200;
             /*
             var zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
@@ -81,12 +91,6 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["ZahtjevDatum"].DisplayIndex = 3;
             */
         }
-
-        
-        private void txtPretrazi_TextChanged(object sender, EventArgs e) {
-            //var trazeniZahtjev = ZahtjevRepository.GetSearchedZahtjev()
-        }
-        
 
         private void btnKreirajZahtjev_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
@@ -106,5 +110,11 @@ namespace HelpDesk__Matea_Klement
             frmZahtjevi.ShowDialog();
             this.Close();
         }
+
+        private void txtPretrazi_TextChanged(object sender, EventArgs e) {
+            
+
+        }
+
     }
 }

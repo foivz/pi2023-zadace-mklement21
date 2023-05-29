@@ -193,9 +193,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(539, 378);
+            this.btnOdustani.Location = new System.Drawing.Point(539, 246);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(89, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(89, 31);
             this.btnOdustani.TabIndex = 18;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -203,9 +203,9 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(653, 378);
+            this.btnSpremi.Location = new System.Drawing.Point(653, 246);
             this.btnSpremi.Name = "btnSpremi";
-            this.btnSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnSpremi.Size = new System.Drawing.Size(75, 31);
             this.btnSpremi.TabIndex = 19;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;

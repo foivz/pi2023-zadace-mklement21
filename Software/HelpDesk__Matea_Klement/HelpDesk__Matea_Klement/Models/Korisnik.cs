@@ -17,5 +17,9 @@ namespace HelpDesk__Matea_Klement.Models {
         public override string ToString() {
             return Ime + " " + Prezime;
         }
+
+        public bool ProvjeriLozinku(string lozinka) {
+            return Lozinka == lozinka;
+        }
     }
 }

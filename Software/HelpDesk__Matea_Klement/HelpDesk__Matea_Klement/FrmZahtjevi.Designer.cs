@@ -107,7 +107,7 @@
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZahtjevi.Location = new System.Drawing.Point(27, 181);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
-            this.dgvZahtjevi.RowHeadersWidth = 51;
+            this.dgvZahtjevi.RowHeadersWidth = 30;
             this.dgvZahtjevi.RowTemplate.Height = 24;
             this.dgvZahtjevi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZahtjevi.Size = new System.Drawing.Size(747, 160);
@@ -115,11 +115,10 @@
             // 
             // txtPretrazi
             // 
-            this.txtPretrazi.Location = new System.Drawing.Point(547, 99);
+            this.txtPretrazi.Location = new System.Drawing.Point(637, 99);
             this.txtPretrazi.Name = "txtPretrazi";
             this.txtPretrazi.Size = new System.Drawing.Size(137, 22);
             this.txtPretrazi.TabIndex = 11;
-            this.txtPretrazi.Text = "Pretraživanje";
             this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged);
             // 
             // btnKreirajZahtjev
