@@ -76,5 +76,14 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
             return korisnik;
         }
+
+        public void AzurirajKorisnika (Korisnik korisnik) {
+            string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}' WHERE IdKorisnik = {4}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+
     }
 }

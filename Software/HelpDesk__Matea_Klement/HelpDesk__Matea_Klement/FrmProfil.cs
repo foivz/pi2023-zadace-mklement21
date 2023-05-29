@@ -55,5 +55,21 @@ namespace HelpDesk__Matea_Klement {
             this.Close();
             Close();
         }
+
+        private void btnSpremi_Click(object sender, EventArgs e) {
+            Korisnik azuriranjeKorisnika = KorisnikRepository.GetKorisnik(4);
+            azuriranjeKorisnika.KorisnickoIme = txtKorisnickoIme.Text;
+            azuriranjeKorisnika.BrojMobitela = txtBroj.Text;
+
+            KorisnikRepository korisnik = new KorisnikRepository();
+            korisnik.AzurirajKorisnika(azuriranjeKorisnika);
+            FrmProfil form = new FrmProfil();
+            this.Visible = false;
+            form.ShowDialog();
+            this.Close();
+            Close();
+
+        
+        }
     }
 }
