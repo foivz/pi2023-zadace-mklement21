@@ -59,5 +59,12 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
+
+        public static void ObrisiZahtjev (Zahtjev zahtjev) {
+            string sql = $"DELETE FROM Zahtjevi WHERE IdZahtjev ={zahtjev.IdZahtjev}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
     }
 }

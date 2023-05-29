@@ -99,5 +99,16 @@ namespace HelpDesk__Matea_Klement
                 frmKreirajZahtjev.ShowDialog();
             }
         }
+
+        private void btnObrisi_Click(object sender, EventArgs e) {
+            Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            if (selectedZahtjev != null) {
+                ZahtjevRepository.ObrisiZahtjev(selectedZahtjev);
+            }
+            FrmZahtjevi frmZahtjevi = new FrmZahtjevi();
+            this.Visible = false;
+            frmZahtjevi.ShowDialog();
+            this.Close();
+        }
     }
 }

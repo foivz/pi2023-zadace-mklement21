@@ -40,6 +40,7 @@
             this.lblDatum = new System.Windows.Forms.Label();
             this.txtPretrazi = new System.Windows.Forms.TextBox();
             this.btnKreirajZahtjev = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.panelZahtjevi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
@@ -184,11 +185,22 @@
             this.btnKreirajZahtjev.UseVisualStyleBackColor = true;
             this.btnKreirajZahtjev.Click += new System.EventHandler(this.btnKreirajZahtjev_Click);
             // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(454, 347);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
+            this.btnObrisi.TabIndex = 13;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
             // FrmZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnKreirajZahtjev);
             this.Controls.Add(this.txtPretrazi);
             this.Controls.Add(this.lblDatum);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.TextBox txtPretrazi;
         private System.Windows.Forms.Button btnKreirajZahtjev;
+        private System.Windows.Forms.Button btnObrisi;
     }
 }
