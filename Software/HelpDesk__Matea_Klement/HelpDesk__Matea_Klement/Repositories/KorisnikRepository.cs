@@ -8,28 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelpDesk__Matea_Klement.Repositories {
+    //klasa KorisnikRepoitory dohvaća zapise o Korisnicima iz baze te pretvara sve zapise u objekt tipa korisnik
     public class KorisnikRepository {
 
-        /*
-        public static Korisnik GetKorisnikPrijava(string korisnicko) {
-            Korisnik korisnik = null;
-            string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnicko}'";
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            if (reader.HasRows) {
-                reader.Read();
-                korisnik = CreateObject(reader);
-                reader.Close();
-            } //if
-            DB.CloseConnection();
-            return FetchKorisnik(sql);
-        }
-        */
-        
+        //metoda za dohvaćanje jednog korisnika po njegovom id
         public static Korisnik GetKorisnik(int id) {
-            Korisnik korisnik = null;
-
             string sql = $"SELECT * FROM Korisnici WHERE IdKorisnik = {id}";
+            Korisnik korisnik = null;
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows) {
@@ -38,26 +23,14 @@ namespace HelpDesk__Matea_Klement.Repositories {
                 reader.Close();
             } //if
             DB.CloseConnection();
-            return FetchKorisnik(sql);
+            return korisnik;
         }
-        /*
-        public static List<Korisnik> GetKorisnici() {
-            List<Korisnik> korisnici = new List<Korisnik>();
-            string sql = $"SELECT * FROM Korisnici";
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            while (reader.Read()) {
-                Korisnik korisnik = CreateObject(reader);
-                korisnici.Add(korisnik);
-            }
-            reader.Close();
-            DB.CloseConnection();
-            return korisnici;
-        }*/
 
+        //metoda za mapiranje atributa objetka tipa Korisnik
         private static Korisnik CreateObject (SqlDataReader reader) {
-            int id = int.Parse(reader["IdKorisnik"].ToString());
             string ime = reader["Ime"].ToString();
+            int id = int.Parse(reader["IdKorisnik"].ToString());
+           
             string prezime = reader["Prezime"].ToString();
             string korisnickoIme = reader["KorisnickoIme"].ToString();
             string broj = reader["BrojMobitela"].ToString();
@@ -75,37 +48,9 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return korisnik;
         }
 
-        /*
-        public static Korisnik GetKorisnik (string korisnickoIme) {
-            string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnickoIme}'";
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            Korisnik Logirni = null;
-            if (reader.HasRows == true) {
-                reader.Read();
-                korisnik = CreateObject(reader);
-                reader.Close();
-            }
-            DB.CloseConnection();
-            return korisnik;
-        }
-        */
-
-        private static Korisnik FetchKorisnik(string sql) {
-            DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
-            Korisnik korisnik = null;
-            if (reader.HasRows == true) {
-                reader.Read();
-                korisnik = CreateObject(reader);
-                reader.Close();
-            }
-            DB.CloseConnection();
-            return korisnik;
-        }
-
+        //metoda nad prepozitorijem koja ažurira zapis u bazi, izvršava SQL naredbu za ažuriranje korisnika
         public void AzurirajKorisnika (Korisnik korisnik) {
-            string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}' WHERE IdKorisnik = {4}";
+            string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}' WHERE IdKorisnik = {korisnik.IdKorisnik}";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();

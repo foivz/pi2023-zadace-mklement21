@@ -11,26 +11,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HelpDesk__Matea_Klement
-{
-    public partial class FrmZahtjevi: Form
-    {
-        public FrmZahtjevi()
-        {
+namespace HelpDesk__Matea_Klement{
+    //klasa FrmZahtjevi
+    public partial class FrmZahtjevi: Form{
+        public FrmZahtjevi(){
             InitializeComponent();
         }
 
-        private void lblPodatciProfila_Click(object sender, EventArgs e) {
+        private void lblPodatciProfila_Click(object sender, EventArgs e) {}
+        private void panelZahtjevi_Paint(object sender, PaintEventArgs e) { }
 
-        }
-
+        //metoda za prikaz forme Profil, aktivacija metode odabirom gumba "Profil"
         private void btnZahtjeviProfil_Click(object sender, EventArgs e) {
             FrmProfil frmZahtjeviProfil = new FrmProfil();
             Hide();
             frmZahtjeviProfil.ShowDialog();
             Close();
         }
-
+        //metoda za prikaz forme Zahtjevi, aktivacija metode odabirom gumba "Zahtjevi"
         private void btnZahtjeviZahtjevi_Click(object sender, EventArgs e) {
             FrmZahtjevi frmZahtjeviZahtjevi = new FrmZahtjevi();
             Hide();
@@ -38,10 +36,7 @@ namespace HelpDesk__Matea_Klement
             Close();
         }
 
-        private void panelZahtjevi_Paint(object sender, PaintEventArgs e) {
-
-        }
-
+        //metoda za prikaz forme Pocetna, aktivacija metode odabirom gumba "Početna"
         private void btnZahtjeviPocetna_Click(object sender, EventArgs e) {
             FrmPocetna frmZahtjeviPocetna = new FrmPocetna();
             Hide();
@@ -49,12 +44,12 @@ namespace HelpDesk__Matea_Klement
             Close();
         }
 
-        //dohvaćanje zahtjeva
+        //metoda za očitavanje podataka podanesenih zahtjeva korisnika
         private void FrmZahtjevi_Load(object sender, EventArgs e) {
             ShowZahtjevi();
         } 
 
-        //prikaz podnesenih zahtjeva
+        //metoda za prikaz podnesenih zahtjeva unutar DataGridView i sređivanje zapisa
         private void ShowZahtjevi() {
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
@@ -77,7 +72,7 @@ namespace HelpDesk__Matea_Klement
             dgvZahtjevi.Columns["ZahtjevOpis"].Width = 200;
         }
 
-        //odlazak na izradu zahtjeva
+        //metoda za kreiranje zahtjeva, aktivacija metode odabirom gumba "Kreiraj zahtjev"
         private void btnKreirajZahtjev_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -86,7 +81,7 @@ namespace HelpDesk__Matea_Klement
             }
         }
 
-        //brisanje zahtjeva
+        //metoda za brisanje zahtjeva, aktivacija metode označavanjem željenog zapisa i pristiskom na gumb "Obriši"
         private void btnObrisi_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -98,7 +93,7 @@ namespace HelpDesk__Matea_Klement
             this.Close();
         }
 
-        //pretrazivanje zahtjeva 
+        //metoda za pretraživanje zapisa u DataGridView po naslovu zahtjeva, aktivacija metode odabitom na prazan textbox te unosom željenog teksa
         private void txtPretrazi_TextChanged_1(object sender, EventArgs e) {
             var pretrazivaniZahtjev = ZahtjevRepository.GetSearchedZahtjev(txtPretrazi.Text);
             dgvZahtjevi.DataSource = pretrazivaniZahtjev;

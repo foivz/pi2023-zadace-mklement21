@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelpDesk__Matea_Klement.Models {
+    //klasa Korisnik, njezini atributi, metoda ToString() za ispis kombinacije imena i prezimena sa razmakom
     public class Korisnik {
         public int IdKorisnik { get; set; }
         public string Ime { get; set; }
@@ -18,8 +19,10 @@ namespace HelpDesk__Matea_Klement.Models {
             return Ime + " " + Prezime;
         }
 
+        /*
         public bool ProvjeriLozinku(string lozinka) {
             return Lozinka == lozinka;
         }
+        */
     }
 }

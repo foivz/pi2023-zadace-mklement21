@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HelpDesk__Matea_Klement {
+    //klasa FrmKreirajZahtjev
     public partial class FrmKreirajZahtjev : Form {
         private Zahtjev zahtjev;
 
@@ -19,20 +20,18 @@ namespace HelpDesk__Matea_Klement {
             InitializeComponent();
             zahtjev = selectedZahtjev;
         }
-
+        //metoda za odustajanje od podnošenja novog zahtjeva, aktivira se odabirom gumba "Odustani"
         private void btnKreiranjeOdustani_Click(object sender, EventArgs e) {
             FrmZahtjevi form = new FrmZahtjevi();
             this.Visible = false;
             form.ShowDialog();
             this.Close();
         }
-
+        //metoda za kreiranje novog zahtjeva, aktivira se odabirom gumba "Spremi"
         private void btnKreiranjeSpremi_Click(object sender, EventArgs e) {
             Zahtjev noviZahtjev = new Zahtjev {
                 ZahtjevNaslov = txtNoviNaslov.Text,
-                //IdZahtjev = int.Parse(txtNoviID.Text),
                 ZahtjevDatum = dtpNoviDatum.Value,
-                //Status = default,
                 ZahtjevOpis = txtNoviOpis.Text,
             };
 

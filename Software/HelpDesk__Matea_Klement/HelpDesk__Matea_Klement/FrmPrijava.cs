@@ -12,13 +12,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HelpDesk__Matea_Klement {
+    //klasa FrmPrijava
     public partial class FrmPrijava : Form {
-        //public static Korisnik LogiraniKorisnik { get; set; }
+        public static Korisnik LogiraniKorisnik { get; set; }
 
         public FrmPrijava() {
             InitializeComponent();
         }
 
+        //metoda za provjeru korisničkih podataka te prikaz Početnog zaslona ukoliko su korisnički podatci ispravni
         private void btnPrijava_Click(object sender, EventArgs e) {
             string korisnickoIme = txtKorisnickoIme.Text;
             string lozinka = txtLozinka.Text;
@@ -30,7 +32,7 @@ namespace HelpDesk__Matea_Klement {
             } else if (lozinka == " ") {
                 MessageBox.Show("Niste unijeli lozinku", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
-                if (korisnickoIme == "majakos" && lozinka == "123456" || korisnickoIme == "matijazec" && lozinka == "654321") {
+                if (korisnickoIme == "majakos" && lozinka == "123456") {
                     FrmPocetna frmPocetna = new FrmPocetna();
 
                     frmPocetna.ShowDialog();
@@ -38,20 +40,6 @@ namespace HelpDesk__Matea_Klement {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            /*
-            LogiraniKorisnik = KorisnikRepository.GetKorisnikPrijava(txtKorisnickoIme.Text);
-            if ( LogiraniKorisnik.ProvjeriLozinku(txtLozinka.Text)) {
-                    FrmPocetna frmPocetna = new FrmPocetna();
-                    Hide();
-                    frmPocetna.ShowDialog();
-                    Close();
-                
-            } 
-            if (LogiraniKorisnik == null || LogiraniKorisnik.Lozinka == txtLozinka.Text) {
-                    MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            */
         }
     }
 }
