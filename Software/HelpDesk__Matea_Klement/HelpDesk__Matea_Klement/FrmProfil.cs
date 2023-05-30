@@ -51,9 +51,9 @@ namespace HelpDesk__Matea_Klement {
         }
         //metoda za odustajanje od promjena, aktivacija metode odabirom gumba "Odustani"
         private void btnOdustani_Click(object sender, EventArgs e) {
-            FrmProfil form = new FrmProfil();
+            FrmProfil frmProfil = new FrmProfil();
             this.Visible = false;
-            form.ShowDialog();
+            frmProfil.ShowDialog();
             this.Close();
             Close();
         }
@@ -65,9 +65,9 @@ namespace HelpDesk__Matea_Klement {
 
             KorisnikRepository korisnik = new KorisnikRepository();
             korisnik.AzurirajKorisnika(azuriranjeKorisnika);
-            FrmProfil form = new FrmProfil();
+            FrmProfil frmProfil = new FrmProfil();
             this.Visible = false;
-            form.ShowDialog();
+            frmProfil.ShowDialog();
             this.Close();
             Close();
         }

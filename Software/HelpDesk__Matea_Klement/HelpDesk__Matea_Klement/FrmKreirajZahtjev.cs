@@ -22,9 +22,9 @@ namespace HelpDesk__Matea_Klement {
         }
         //metoda za odustajanje od podnošenja novog zahtjeva, aktivira se odabirom gumba "Odustani"
         private void btnKreiranjeOdustani_Click(object sender, EventArgs e) {
-            FrmZahtjevi form = new FrmZahtjevi();
+            FrmZahtjevi frmZahtjevi = new FrmZahtjevi();
             this.Visible = false;
-            form.ShowDialog();
+            frmZahtjevi.ShowDialog();
             this.Close();
         }
         //metoda za kreiranje novog zahtjeva, aktivira se odabirom gumba "Spremi"
@@ -38,9 +38,9 @@ namespace HelpDesk__Matea_Klement {
             ZahtjevRepository zahtjev = new ZahtjevRepository();
             ZahtjevRepository.KreirajZahtjev(noviZahtjev);
 
-            FrmZahtjevi form = new FrmZahtjevi();
+            FrmZahtjevi frmZahtjevi = new FrmZahtjevi();
             this.Visible = false;
-            form.ShowDialog();
+            frmZahtjevi.ShowDialog();
             this.Close();
         }
     }
