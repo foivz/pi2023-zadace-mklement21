@@ -1,5 +1,9 @@
 # Korisnički zahtjevi za Softver Help Desk za Centar za informatičku podršku (CIP) 
 
+## Prijava u aplikaciju - podatci
+Korisničko ime : majakos
+Lozinka : 123456
+
 ## Podaci o studentu
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
