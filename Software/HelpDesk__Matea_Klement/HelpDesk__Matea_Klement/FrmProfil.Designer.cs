@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfil));
             this.panelProfil = new System.Windows.Forms.Panel();
             this.btnProfilPocetna = new System.Windows.Forms.Button();
             this.btnProfilProfil = new System.Windows.Forms.Button();
@@ -221,10 +222,10 @@
             this.Controls.Add(this.lblPodatciProfila);
             this.Controls.Add(this.panelProfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProfil";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profil korisnika";
             this.Load += new System.EventHandler(this.FrmProfil_Load);

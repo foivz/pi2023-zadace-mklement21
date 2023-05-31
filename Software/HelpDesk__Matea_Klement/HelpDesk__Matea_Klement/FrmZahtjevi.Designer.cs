@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmZahtjevi));
             this.panelZahtjevi = new System.Windows.Forms.Panel();
             this.btnZahtjeviPocetna = new System.Windows.Forms.Button();
             this.btnZahtjeviProfil = new System.Windows.Forms.Button();
@@ -170,10 +171,10 @@
             this.Controls.Add(this.lblZahtjevi);
             this.Controls.Add(this.panelZahtjevi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmZahtjevi";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zahtjevi";
             this.Load += new System.EventHandler(this.FrmZahtjevi_Load);

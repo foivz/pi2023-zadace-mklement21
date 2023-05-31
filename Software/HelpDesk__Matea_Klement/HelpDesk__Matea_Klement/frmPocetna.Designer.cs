@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.Windows.Forms.Panel panelPocetna;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPocetna));
             this.btnPocetnaPocetna = new System.Windows.Forms.Button();
             this.btnPocetnaProfil = new System.Windows.Forms.Button();
             this.btnPocetnaZahtjevi = new System.Windows.Forms.Button();
@@ -166,6 +167,7 @@
             this.Controls.Add(this.panelDobrodosli);
             this.Controls.Add(panelPocetna);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPocetna";
