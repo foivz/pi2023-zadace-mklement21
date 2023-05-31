@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.Windows.Forms.Panel panelPocetna;
+            this.btnPocetnaPocetna = new System.Windows.Forms.Button();
             this.btnPocetnaProfil = new System.Windows.Forms.Button();
             this.btnPocetnaZahtjevi = new System.Windows.Forms.Button();
             this.panelDobrodosli = new System.Windows.Forms.Panel();
@@ -33,7 +34,6 @@
             this.lblKontaktEmail = new System.Windows.Forms.Label();
             this.lblKontaktAdresa = new System.Windows.Forms.Label();
             this.lblKontakt = new System.Windows.Forms.Label();
-            this.btnPocetnaPocetna = new System.Windows.Forms.Button();
             panelPocetna = new System.Windows.Forms.Panel();
             panelPocetna.SuspendLayout();
             this.panelDobrodosli.SuspendLayout();
@@ -50,6 +50,17 @@
             panelPocetna.Name = "panelPocetna";
             panelPocetna.Size = new System.Drawing.Size(799, 41);
             panelPocetna.TabIndex = 3;
+            // 
+            // btnPocetnaPocetna
+            // 
+            this.btnPocetnaPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPocetnaPocetna.Location = new System.Drawing.Point(63, 3);
+            this.btnPocetnaPocetna.Name = "btnPocetnaPocetna";
+            this.btnPocetnaPocetna.Size = new System.Drawing.Size(161, 35);
+            this.btnPocetnaPocetna.TabIndex = 6;
+            this.btnPocetnaPocetna.Text = "Početna";
+            this.btnPocetnaPocetna.UseVisualStyleBackColor = true;
+            this.btnPocetnaPocetna.Click += new System.EventHandler(this.btnPocetnaPocetna_Click);
             // 
             // btnPocetnaProfil
             // 
@@ -146,17 +157,6 @@
             this.lblKontakt.TabIndex = 0;
             this.lblKontakt.Text = "Kontakt informacije";
             // 
-            // btnPocetnaPocetna
-            // 
-            this.btnPocetnaPocetna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPocetnaPocetna.Location = new System.Drawing.Point(63, 3);
-            this.btnPocetnaPocetna.Name = "btnPocetnaPocetna";
-            this.btnPocetnaPocetna.Size = new System.Drawing.Size(161, 35);
-            this.btnPocetnaPocetna.TabIndex = 6;
-            this.btnPocetnaPocetna.Text = "Početna";
-            this.btnPocetnaPocetna.UseVisualStyleBackColor = true;
-            this.btnPocetnaPocetna.Click += new System.EventHandler(this.btnPocetnaPocetna_Click);
-            // 
             // FrmPocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,7 +169,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPocetna";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help Desk";
             panelPocetna.ResumeLayout(false);

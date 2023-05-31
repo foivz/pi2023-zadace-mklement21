@@ -10,6 +10,21 @@ using System.Threading.Tasks;
 namespace HelpDesk__Matea_Klement.Repositories {
     //klasa KorisnikRepoitory dohvaća zapise o Korisnicima iz baze te pretvara sve zapise u objekt tipa korisnik
     public class KorisnikRepository {
+        public static Korisnik GetKorisnik(string korisnickoIme) {
+            string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnickoIme}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            Korisnik korisnik = null;
+
+            if (reader.HasRows == true) {
+                reader.Read();
+                korisnik = CreateObject(reader);
+                reader.Close();
+            }
+            DB.CloseConnection();
+
+            return korisnik;
+        }
 
         //metoda za dohvaćanje jednog korisnika po njegovom id
         public static Korisnik GetKorisnik(int id) {

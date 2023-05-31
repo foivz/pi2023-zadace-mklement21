@@ -10,20 +10,19 @@ using System.Threading.Tasks;
 namespace HelpDesk__Matea_Klement.Repositories {
     //klasa ZahtjevRepository dohvaća zapise o Zahtjevima iz baze te pretvara sve zapise u objekt tipa zahtjevi
     public class ZahtjevRepository {
-        //metoda GetZahtjevi ohvaća sve podnesene zahtjeve
-        public static List<Zahtjev> GetZahtjevi() {
-            List<Zahtjev> zahtjevi = new List<Zahtjev>();
-            string sql = "SELECT * FROM Zahtjevi";
+        //klasa GetZahtjeviKorisnika koja uzima sve zahtjeve od logiranog korisnika te iz zapisuje u listu i vraća zapis liste
+        public static List<Zahtjev> GetZahtjeviKorisnika(int id) {
+            List<Zahtjev> evaluations = new List<Zahtjev>();
+            string sql = $"SELECT * FROM Zahtjevi WHERE IdKorisnik = {id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
-
             while (reader.Read()) {
-                Zahtjev zahtjev = CreateObject(reader);
-                zahtjevi.Add(zahtjev);
+                Zahtjev evaluation = CreateObject(reader);
+                evaluations.Add(evaluation);
             }
             reader.Close();
             DB.CloseConnection();
-            return zahtjevi;
+            return evaluations;
         }
 
         //metoda za mapiranje atributa objetka tipa Zahtjev
@@ -46,7 +45,8 @@ namespace HelpDesk__Matea_Klement.Repositories {
 
         //metoda za kreiranje novog zahtjeva koja izvršaval SQL naredbu za unos novog zapisa u bazu
         public static void KreirajZahtjev (Zahtjev zahtjev) {
-            string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum, ZahtjevOpis) VALUES ('{zahtjev.ZahtjevNaslov}', GETDATE(), '{zahtjev.ZahtjevOpis}')";
+            var korisnik = FrmPrijava.LogiraniKorisnik;
+            string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum, ZahtjevOpis, IdKorisnik) VALUES ('{zahtjev.ZahtjevNaslov}', GETDATE(), '{zahtjev.ZahtjevOpis}', '{korisnik.IdKorisnik}')";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();

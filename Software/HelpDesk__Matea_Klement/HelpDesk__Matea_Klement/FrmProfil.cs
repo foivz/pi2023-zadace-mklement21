@@ -42,7 +42,8 @@ namespace HelpDesk__Matea_Klement {
         }
         //metoda za očitavanje podataka profila prilikom dolaska na formu
         private void FrmProfil_Load(object sender, EventArgs e) {
-            var logiraniKorisnik = KorisnikRepository.GetKorisnik(4);
+            var korisnik = FrmPrijava.LogiraniKorisnik;
+            var logiraniKorisnik = KorisnikRepository.GetKorisnik(korisnik.IdKorisnik);
 
             txtImePrezime.Text = logiraniKorisnik.ToString();
             txtBroj.Text = logiraniKorisnik.BrojMobitela;

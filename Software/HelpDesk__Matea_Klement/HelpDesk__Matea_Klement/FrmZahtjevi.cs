@@ -51,7 +51,8 @@ namespace HelpDesk__Matea_Klement{
 
         //metoda za prikaz podnesenih zahtjeva unutar DataGridView i sređivanje zapisa
         private void ShowZahtjevi() {
-            List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
+            var korisnik = FrmPrijava.LogiraniKorisnik;
+            List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjeviKorisnika(korisnik.IdKorisnik);
             dgvZahtjevi.DataSource = zahtjevi;
             dgvZahtjevi.Columns["IdZahtjev"].DisplayIndex = 0;
             dgvZahtjevi.Columns["ZahtjevNaslov"].DisplayIndex = 1;

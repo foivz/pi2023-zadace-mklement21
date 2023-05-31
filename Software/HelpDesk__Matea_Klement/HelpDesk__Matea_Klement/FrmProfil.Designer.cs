@@ -132,6 +132,9 @@
             // 
             // txtImePrezime
             // 
+            this.txtImePrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtImePrezime.Location = new System.Drawing.Point(185, 153);
             this.txtImePrezime.Name = "txtImePrezime";
             this.txtImePrezime.Size = new System.Drawing.Size(168, 22);
@@ -139,6 +142,9 @@
             // 
             // txtBroj
             // 
+            this.txtBroj.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBroj.Location = new System.Drawing.Point(185, 255);
             this.txtBroj.Name = "txtBroj";
             this.txtBroj.Size = new System.Drawing.Size(168, 22);
@@ -146,6 +152,9 @@
             // 
             // txtTrenutnaZaporka
             // 
+            this.txtTrenutnaZaporka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTrenutnaZaporka.Location = new System.Drawing.Point(185, 330);
             this.txtTrenutnaZaporka.MaxLength = 6;
             this.txtTrenutnaZaporka.Name = "txtTrenutnaZaporka";
@@ -166,6 +175,9 @@
             // 
             // txtKorisnickoIme
             // 
+            this.txtKorisnickoIme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKorisnickoIme.Location = new System.Drawing.Point(185, 201);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(168, 22);

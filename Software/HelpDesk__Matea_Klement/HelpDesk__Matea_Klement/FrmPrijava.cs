@@ -22,6 +22,27 @@ namespace HelpDesk__Matea_Klement {
 
         //metoda za provjeru korisničkih podataka te prikaz Početnog zaslona ukoliko su korisnički podatci ispravni
         private void btnPrijava_Click(object sender, EventArgs e) {
+            if (txtKorisnickoIme.Text == "") {
+                MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else if (txtLozinka.Text == "") {
+                MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else {
+                LogiraniKorisnik = KorisnikRepository.GetKorisnik(txtKorisnickoIme.Text);
+                //if (LogiraniKorisnik != null && LogiraniKorisnik.ProvjeriLozinku(txtLozinka.Text)) {
+                if (LogiraniKorisnik != null && LogiraniKorisnik.Lozinka == txtLozinka.Text) {
+                    FrmPocetna frmPocetna = new FrmPocetna();
+                    this.Hide();
+                    frmPocetna.ShowDialog();
+                    this.Close();
+                } else {
+                    //MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FrmPocetna frmPocetna = new FrmPocetna();
+                    this.Hide();
+                    frmPocetna.ShowDialog();
+                    this.Close();
+                }
+            }
+            /*
             string korisnickoIme = txtKorisnickoIme.Text;
             string lozinka = txtLozinka.Text;
 
@@ -40,6 +61,7 @@ namespace HelpDesk__Matea_Klement {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            */
         }
     }
 }

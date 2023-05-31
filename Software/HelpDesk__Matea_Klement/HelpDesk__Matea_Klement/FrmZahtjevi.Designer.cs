@@ -37,6 +37,7 @@
             this.txtPretrazi = new System.Windows.Forms.TextBox();
             this.btnKreirajZahtjev = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
+            this.lblPretrazivanje = new System.Windows.Forms.Label();
             this.panelZahtjevi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
@@ -110,20 +111,25 @@
             this.dgvZahtjevi.RowHeadersWidth = 30;
             this.dgvZahtjevi.RowTemplate.Height = 24;
             this.dgvZahtjevi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvZahtjevi.Size = new System.Drawing.Size(747, 160);
+            this.dgvZahtjevi.Size = new System.Drawing.Size(747, 199);
             this.dgvZahtjevi.TabIndex = 6;
             // 
             // txtPretrazi
             // 
-            this.txtPretrazi.Location = new System.Drawing.Point(567, 99);
+            this.txtPretrazi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPretrazi.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPretrazi.Location = new System.Drawing.Point(567, 153);
             this.txtPretrazi.Name = "txtPretrazi";
             this.txtPretrazi.Size = new System.Drawing.Size(207, 22);
             this.txtPretrazi.TabIndex = 11;
+            this.txtPretrazi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged_1);
             // 
             // btnKreirajZahtjev
             // 
-            this.btnKreirajZahtjev.Location = new System.Drawing.Point(635, 347);
+            this.btnKreirajZahtjev.Location = new System.Drawing.Point(635, 386);
             this.btnKreirajZahtjev.Name = "btnKreirajZahtjev";
             this.btnKreirajZahtjev.Size = new System.Drawing.Size(139, 24);
             this.btnKreirajZahtjev.TabIndex = 12;
@@ -133,7 +139,7 @@
             // 
             // btnObrisi
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(461, 347);
+            this.btnObrisi.Location = new System.Drawing.Point(461, 386);
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(139, 24);
             this.btnObrisi.TabIndex = 13;
@@ -141,11 +147,22 @@
             this.btnObrisi.UseVisualStyleBackColor = true;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
+            // lblPretrazivanje
+            // 
+            this.lblPretrazivanje.AutoSize = true;
+            this.lblPretrazivanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPretrazivanje.Location = new System.Drawing.Point(617, 134);
+            this.lblPretrazivanje.Name = "lblPretrazivanje";
+            this.lblPretrazivanje.Size = new System.Drawing.Size(154, 16);
+            this.lblPretrazivanje.TabIndex = 14;
+            this.lblPretrazivanje.Text = "Pretraživanje po naslovu";
+            // 
             // FrmZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPretrazivanje);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnKreirajZahtjev);
             this.Controls.Add(this.txtPretrazi);
@@ -178,5 +195,6 @@
         private System.Windows.Forms.TextBox txtPretrazi;
         private System.Windows.Forms.Button btnKreirajZahtjev;
         private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Label lblPretrazivanje;
     }
 }

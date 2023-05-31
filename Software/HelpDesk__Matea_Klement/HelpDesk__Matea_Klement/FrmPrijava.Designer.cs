@@ -70,9 +70,9 @@
             // 
             this.txtLozinka.Location = new System.Drawing.Point(59, 125);
             this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(174, 22);
             this.txtLozinka.TabIndex = 3;
+            this.txtLozinka.UseSystemPasswordChar = true;
             // 
             // txtKorisnickoIme
             // 
