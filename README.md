@@ -1,8 +1,17 @@
 # Korisnički zahtjevi za Softver Help Desk za Centar za informatičku podršku (CIP) 
 
 ## Prijava u aplikaciju - podatci
-Korisničko ime : majakos
-Lozinka : 123456
+* _Podatci za prijavu korisnik 1_
+  * Korisničko ime : majakos
+  * Lozinka : 123456
+
+* _Podatci za prijavu korisnik 2_
+  * Korisničko ime : matijazec
+  * Lozinka : 654321
+
+* _Podatci za prijavu korisnik 3_
+  * Korisničko ime : petarvalic
+  * Lozinka : 123456
 
 ## Podaci o studentu
 
