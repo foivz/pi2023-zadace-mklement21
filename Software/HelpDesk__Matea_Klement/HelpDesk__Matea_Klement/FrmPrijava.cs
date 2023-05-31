@@ -32,40 +32,15 @@ namespace HelpDesk__Matea_Klement {
                 MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 LogiraniKorisnik = KorisnikRepository.GetKorisnik(txtKorisnickoIme.Text);
-                //if (LogiraniKorisnik != null && LogiraniKorisnik.ProvjeriLozinku(txtLozinka.Text)) {
-                if (LogiraniKorisnik != null && LogiraniKorisnik.Lozinka == txtLozinka.Text) {
+                if (LogiraniKorisnik != null && int.Parse(LogiraniKorisnik.Lozinka) == int.Parse(txtLozinka.Text)) {
                     FrmPocetna frmPocetna = new FrmPocetna();
-                    this.Hide();
+                    this.Hide(); 
                     frmPocetna.ShowDialog();
                     this.Close();
-                } else {
-                    //MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    FrmPocetna frmPocetna = new FrmPocetna();
-                    this.Hide();
-                    frmPocetna.ShowDialog();
-                    this.Close();
-                }
-            }
-            /*
-            string korisnickoIme = txtKorisnickoIme.Text;
-            string lozinka = txtLozinka.Text;
-
-            if (korisnickoIme == "" && lozinka == "") {
-                MessageBox.Show("Niste ispunili sve podatke", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else if (korisnickoIme == "") {
-                MessageBox.Show("Niste unijeli korisničko ime", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else if (lozinka == " ") {
-                MessageBox.Show("Niste unijeli lozinku", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else {
-                if (korisnickoIme == "majakos" && lozinka == "123456") {
-                    FrmPocetna frmPocetna = new FrmPocetna();
-
-                    frmPocetna.ShowDialog();
                 } else {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            */
         }
     }
 }

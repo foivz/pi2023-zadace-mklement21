@@ -65,6 +65,7 @@ namespace HelpDesk__Matea_Klement {
             txtBroj.Text = logiraniKorisnik.BrojMobitela;
             txtTrenutnaZaporka.Text = logiraniKorisnik.Lozinka;
             txtKorisnickoIme.Text = logiraniKorisnik.KorisnickoIme;
+            txtEmail.Text = logiraniKorisnik.Email;
         }
         /// <summary>
         /// metoda za odustajanje od promjena, aktivacija metode odabirom gumba "Odustani"
@@ -84,12 +85,17 @@ namespace HelpDesk__Matea_Klement {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnSpremi_Click(object sender, EventArgs e) {
-            Korisnik azuriranjeKorisnika = KorisnikRepository.GetKorisnik(4);
+            var logiraniKorisnik = FrmPrijava.LogiraniKorisnik;
+            Korisnik azuriranjeKorisnika = KorisnikRepository.GetKorisnik(logiraniKorisnik.IdKorisnik);
+            var korisnikLozinka = txtTrenutnaZaporka.ToString();
             azuriranjeKorisnika.KorisnickoIme = txtKorisnickoIme.Text;
             azuriranjeKorisnika.BrojMobitela = txtBroj.Text;
+            azuriranjeKorisnika.Email = txtEmail.Text;
+            azuriranjeKorisnika.Lozinka = txtTrenutnaZaporka.Text;
 
             KorisnikRepository korisnik = new KorisnikRepository();
             korisnik.AzurirajKorisnika(azuriranjeKorisnika);
+            MessageBox.Show("Podatci ažurirani!","Ažurirano", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmProfil frmProfil = new FrmProfil();
             this.Visible = false;
             frmProfil.ShowDialog();

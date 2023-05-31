@@ -37,6 +37,7 @@ namespace HelpDesk__Matea_Klement {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnKreiranjeSpremi_Click(object sender, EventArgs e) {
+            MessageBox.Show("Novi zahtjev kreiran!", "Kreiran zahtjev", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Zahtjev noviZahtjev = new Zahtjev {
                 ZahtjevNaslov = txtNoviNaslov.Text,
                 ZahtjevDatum = dtpNoviDatum.Value,

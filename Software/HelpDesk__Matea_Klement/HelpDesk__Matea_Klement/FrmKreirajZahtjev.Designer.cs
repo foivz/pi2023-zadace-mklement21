@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKreirajZahtjev));
             this.lblNoviZahtjev = new System.Windows.Forms.Label();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.lblOpis = new System.Windows.Forms.Label();
@@ -79,9 +80,9 @@
             // 
             // btnKreiranjeSpremi
             // 
-            this.btnKreiranjeSpremi.Location = new System.Drawing.Point(457, 249);
+            this.btnKreiranjeSpremi.Location = new System.Drawing.Point(457, 246);
             this.btnKreiranjeSpremi.Name = "btnKreiranjeSpremi";
-            this.btnKreiranjeSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnKreiranjeSpremi.Size = new System.Drawing.Size(75, 26);
             this.btnKreiranjeSpremi.TabIndex = 11;
             this.btnKreiranjeSpremi.Text = "Spremi";
             this.btnKreiranjeSpremi.UseVisualStyleBackColor = true;
@@ -89,9 +90,9 @@
             // 
             // btnKreiranjeOdustani
             // 
-            this.btnKreiranjeOdustani.Location = new System.Drawing.Point(347, 249);
+            this.btnKreiranjeOdustani.Location = new System.Drawing.Point(347, 246);
             this.btnKreiranjeOdustani.Name = "btnKreiranjeOdustani";
-            this.btnKreiranjeOdustani.Size = new System.Drawing.Size(85, 23);
+            this.btnKreiranjeOdustani.Size = new System.Drawing.Size(85, 26);
             this.btnKreiranjeOdustani.TabIndex = 12;
             this.btnKreiranjeOdustani.Text = "Odustani";
             this.btnKreiranjeOdustani.UseVisualStyleBackColor = true;
@@ -128,10 +129,10 @@
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.lblNoviZahtjev);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmKreirajZahtjev";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kreiranje zahtjeva";
             this.ResumeLayout(false);

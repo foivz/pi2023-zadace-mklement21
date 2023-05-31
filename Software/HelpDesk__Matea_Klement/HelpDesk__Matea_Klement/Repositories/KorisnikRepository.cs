@@ -65,6 +65,7 @@ namespace HelpDesk__Matea_Klement.Repositories {
             string korisnickoIme = reader["KorisnickoIme"].ToString();
             string broj = reader["BrojMobitela"].ToString();
             string lozinka = reader["Lozinka"].ToString();
+            string email = reader["Email"].ToString();
 
 
             var korisnik = new Korisnik {
@@ -73,17 +74,18 @@ namespace HelpDesk__Matea_Klement.Repositories {
                 Prezime = prezime,
                 KorisnickoIme = korisnickoIme,
                 BrojMobitela = broj,
-                Lozinka = lozinka
+                Lozinka = lozinka,
+                Email = email
             };
             return korisnik;
         }
 
         /// <summary>
-        /// metoda nad prepozitorijem koja ažurira zapis u bazi, izvršava SQL naredbu za ažuriranje korisnika
+        /// metoda nad repozitorijem koja ažurira zapis u bazi, izvršava SQL naredbu za ažuriranje korisnika
         /// </summary>
         /// <param name="korisnik"></param>
         public void AzurirajKorisnika (Korisnik korisnik) {
-            string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}' WHERE IdKorisnik = {korisnik.IdKorisnik}";
+            string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}', Email = '{korisnik.Email}', Lozinka = '{korisnik.Lozinka}' WHERE IdKorisnik = {korisnik.IdKorisnik}";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();

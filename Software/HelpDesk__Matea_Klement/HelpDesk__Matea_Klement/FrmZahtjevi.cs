@@ -115,6 +115,7 @@ namespace HelpDesk__Matea_Klement{
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
                 ZahtjevRepository.ObrisiZahtjev(selectedZahtjev);
+                MessageBox.Show("Zahtjev je obrisan!", "Obrisan zahtjev", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             FrmZahtjevi frmZahtjevi = new FrmZahtjevi();
             this.Visible = false;

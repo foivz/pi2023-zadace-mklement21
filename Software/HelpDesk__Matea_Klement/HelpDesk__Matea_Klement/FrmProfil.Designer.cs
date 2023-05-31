@@ -39,6 +39,8 @@
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panelProfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +115,7 @@
             // 
             this.lblProfilBroj.AutoSize = true;
             this.lblProfilBroj.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProfilBroj.Location = new System.Drawing.Point(35, 255);
+            this.lblProfilBroj.Location = new System.Drawing.Point(35, 272);
             this.lblProfilBroj.Name = "lblProfilBroj";
             this.lblProfilBroj.Size = new System.Drawing.Size(109, 19);
             this.lblProfilBroj.TabIndex = 8;
@@ -124,7 +126,7 @@
             // 
             this.lblProfilTrenutnaZaporka.AutoSize = true;
             this.lblProfilTrenutnaZaporka.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProfilTrenutnaZaporka.Location = new System.Drawing.Point(34, 331);
+            this.lblProfilTrenutnaZaporka.Location = new System.Drawing.Point(35, 392);
             this.lblProfilTrenutnaZaporka.Name = "lblProfilTrenutnaZaporka";
             this.lblProfilTrenutnaZaporka.Size = new System.Drawing.Size(127, 19);
             this.lblProfilTrenutnaZaporka.TabIndex = 9;
@@ -136,7 +138,7 @@
             this.txtImePrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImePrezime.Location = new System.Drawing.Point(185, 153);
+            this.txtImePrezime.Location = new System.Drawing.Point(185, 148);
             this.txtImePrezime.Name = "txtImePrezime";
             this.txtImePrezime.Size = new System.Drawing.Size(168, 22);
             this.txtImePrezime.TabIndex = 11;
@@ -146,7 +148,7 @@
             this.txtBroj.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBroj.Location = new System.Drawing.Point(185, 255);
+            this.txtBroj.Location = new System.Drawing.Point(185, 268);
             this.txtBroj.Name = "txtBroj";
             this.txtBroj.Size = new System.Drawing.Size(168, 22);
             this.txtBroj.TabIndex = 13;
@@ -156,18 +158,18 @@
             this.txtTrenutnaZaporka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrenutnaZaporka.Location = new System.Drawing.Point(185, 330);
+            this.txtTrenutnaZaporka.Location = new System.Drawing.Point(185, 391);
             this.txtTrenutnaZaporka.MaxLength = 6;
             this.txtTrenutnaZaporka.Name = "txtTrenutnaZaporka";
-            this.txtTrenutnaZaporka.PasswordChar = '*';
             this.txtTrenutnaZaporka.Size = new System.Drawing.Size(168, 22);
             this.txtTrenutnaZaporka.TabIndex = 14;
+            this.txtTrenutnaZaporka.UseSystemPasswordChar = true;
             // 
             // lblKorisnickoIme
             // 
             this.lblKorisnickoIme.AutoSize = true;
             this.lblKorisnickoIme.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKorisnickoIme.Location = new System.Drawing.Point(34, 204);
+            this.lblKorisnickoIme.Location = new System.Drawing.Point(34, 214);
             this.lblKorisnickoIme.Name = "lblKorisnickoIme";
             this.lblKorisnickoIme.Size = new System.Drawing.Size(108, 19);
             this.lblKorisnickoIme.TabIndex = 16;
@@ -179,14 +181,14 @@
             this.txtKorisnickoIme.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(185, 201);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(185, 208);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(168, 22);
             this.txtKorisnickoIme.TabIndex = 17;
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(539, 246);
+            this.btnOdustani.Location = new System.Drawing.Point(539, 380);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(89, 31);
             this.btnOdustani.TabIndex = 18;
@@ -196,7 +198,7 @@
             // 
             // btnSpremi
             // 
-            this.btnSpremi.Location = new System.Drawing.Point(653, 246);
+            this.btnSpremi.Location = new System.Drawing.Point(653, 380);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(75, 31);
             this.btnSpremi.TabIndex = 19;
@@ -204,11 +206,34 @@
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblEmail.Location = new System.Drawing.Point(35, 332);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(94, 19);
+            this.lblEmail.TabIndex = 20;
+            this.lblEmail.Text = "Email adresa";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(185, 328);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(168, 22);
+            this.txtEmail.TabIndex = 21;
+            // 
             // FrmProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.txtKorisnickoIme);
@@ -252,5 +277,7 @@
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Button btnSpremi;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
