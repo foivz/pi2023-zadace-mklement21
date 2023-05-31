@@ -19,28 +19,44 @@ namespace HelpDesk__Matea_Klement {
             InitializeComponent();
         }
 
-        //metoda za prikaz forme Profil, aktivacija metode odabirom gumba "Profil"
+        /// <summary>
+        /// metoda za prikaz forme Profil, aktivacija metode odabirom gumba "Profil"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProfilProfil_Click(object sender, EventArgs e) {
             FrmProfil frmProfilProfil = new FrmProfil();
             Hide();
             frmProfilProfil.ShowDialog();
             Close();
         }
-        //metoda za prikaz forme Zahtjevi, aktivacija metode odabirom gumba "Zahtjevi"
+        /// <summary>
+        /// metoda za prikaz forme Zahtjevi, aktivacija metode odabirom gumba "Zahtjevi"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProfilZahtjevi_Click(object sender, EventArgs e) {
             FrmZahtjevi frmProfilZahtjevi = new FrmZahtjevi();
             Hide();
             frmProfilZahtjevi.ShowDialog();
             Close();
         }
-        //metoda za prikaz forme Početna, aktivacija metode odabirom gumba "Pocetna"
+        /// <summary>
+        /// metoda za prikaz forme Početna, aktivacija metode odabirom gumba "Pocetna"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProfilPocetna_Click(object sender, EventArgs e) {
             FrmPocetna frmProfilPocetna = new FrmPocetna();
             Hide();
             frmProfilPocetna.ShowDialog();
             Close();
         }
-        //metoda za očitavanje podataka profila prilikom dolaska na formu
+        /// <summary>
+        /// metoda za očitavanje podataka profila prilikom dolaska na formu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmProfil_Load(object sender, EventArgs e) {
             var korisnik = FrmPrijava.LogiraniKorisnik;
             var logiraniKorisnik = KorisnikRepository.GetKorisnik(korisnik.IdKorisnik);
@@ -50,7 +66,11 @@ namespace HelpDesk__Matea_Klement {
             txtTrenutnaZaporka.Text = logiraniKorisnik.Lozinka;
             txtKorisnickoIme.Text = logiraniKorisnik.KorisnickoIme;
         }
-        //metoda za odustajanje od promjena, aktivacija metode odabirom gumba "Odustani"
+        /// <summary>
+        /// metoda za odustajanje od promjena, aktivacija metode odabirom gumba "Odustani"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOdustani_Click(object sender, EventArgs e) {
             FrmProfil frmProfil = new FrmProfil();
             this.Visible = false;
@@ -58,7 +78,11 @@ namespace HelpDesk__Matea_Klement {
             this.Close();
             Close();
         }
-        //metoda za spremanje promjena na profilu korisnika (ažuriranje), aktivacija metode odabirom gumba "Spremi", moguća promjena podataka korisničko ime i broj mobitela
+        /// <summary>
+        /// metoda za spremanje promjena na profilu korisnika (ažuriranje), aktivacija metode odabirom gumba "Spremi", moguća promjena podataka korisničko ime i broj mobitela
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpremi_Click(object sender, EventArgs e) {
             Korisnik azuriranjeKorisnika = KorisnikRepository.GetKorisnik(4);
             azuriranjeKorisnika.KorisnickoIme = txtKorisnickoIme.Text;

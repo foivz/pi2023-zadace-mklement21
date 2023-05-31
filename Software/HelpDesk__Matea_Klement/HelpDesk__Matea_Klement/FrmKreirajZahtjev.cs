@@ -20,14 +20,22 @@ namespace HelpDesk__Matea_Klement {
             InitializeComponent();
             zahtjev = selectedZahtjev;
         }
-        //metoda za odustajanje od podnošenja novog zahtjeva, aktivira se odabirom gumba "Odustani"
+        /// <summary>
+        /// metoda za odustajanje od podnošenja novog zahtjeva, aktivira se odabirom gumba "Odustani"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnKreiranjeOdustani_Click(object sender, EventArgs e) {
             FrmZahtjevi frmZahtjevi = new FrmZahtjevi();
             this.Visible = false;
             frmZahtjevi.ShowDialog();
             this.Close();
         }
-        //metoda za kreiranje novog zahtjeva, aktivira se odabirom gumba "Spremi"
+        /// <summary>
+        /// metoda za kreiranje novog zahtjeva, aktivira se odabirom gumba "Spremi"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnKreiranjeSpremi_Click(object sender, EventArgs e) {
             Zahtjev noviZahtjev = new Zahtjev {
                 ZahtjevNaslov = txtNoviNaslov.Text,

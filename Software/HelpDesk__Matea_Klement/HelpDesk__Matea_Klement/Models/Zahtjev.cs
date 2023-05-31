@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelpDesk__Matea_Klement.Models {
-    //klasa Zahtjev i njezini atributi
+    /// <summary>
+    /// klasa Zahtjev i njezini atributi
+    /// </summary>
     public class Zahtjev {
         public int IdZahtjev { get; set; }
         public string ZahtjevNaslov { get; set; }

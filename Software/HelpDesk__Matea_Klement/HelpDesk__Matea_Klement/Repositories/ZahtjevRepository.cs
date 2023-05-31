@@ -10,7 +10,11 @@ using System.Threading.Tasks;
 namespace HelpDesk__Matea_Klement.Repositories {
     //klasa ZahtjevRepository dohvaća zapise o Zahtjevima iz baze te pretvara sve zapise u objekt tipa zahtjevi
     public class ZahtjevRepository {
-        //klasa GetZahtjeviKorisnika koja uzima sve zahtjeve od logiranog korisnika te iz zapisuje u listu i vraća zapis liste
+        /// <summary>
+        /// klasa GetZahtjeviKorisnika koja uzima sve zahtjeve od logiranog korisnika te iz zapisuje u listu i vraća zapis liste
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static List<Zahtjev> GetZahtjeviKorisnika(int id) {
             List<Zahtjev> evaluations = new List<Zahtjev>();
             string sql = $"SELECT * FROM Zahtjevi WHERE IdKorisnik = {id}";
@@ -25,7 +29,11 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return evaluations;
         }
 
-        //metoda za mapiranje atributa objetka tipa Zahtjev
+        /// <summary>
+        /// metoda za mapiranje atributa objekta tipa Zahtjev
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private static Zahtjev CreateObject (SqlDataReader reader) {
             int id = int.Parse(reader["IdZahtjev"].ToString());
             string naslov = reader["ZahtjevNaslov"].ToString();
@@ -43,7 +51,10 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return zahtjev;
         }
 
-        //metoda za kreiranje novog zahtjeva koja izvršaval SQL naredbu za unos novog zapisa u bazu
+        /// <summary>
+        /// metoda za kreiranje novog zahtjeva logiranog korisnika koja izvršaval SQL naredbu za unos novog zapisa u bazu
+        /// </summary>
+        /// <param name="zahtjev"></param>
         public static void KreirajZahtjev (Zahtjev zahtjev) {
             var korisnik = FrmPrijava.LogiraniKorisnik;
             string sql = $"INSERT INTO Zahtjevi (ZahtjevNaslov, ZahtjevDatum, ZahtjevOpis, IdKorisnik) VALUES ('{zahtjev.ZahtjevNaslov}', GETDATE(), '{zahtjev.ZahtjevOpis}', '{korisnik.IdKorisnik}')";
@@ -52,7 +63,10 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
         }
 
-        //metoda za brisanje zahtjeva koja izvršaval SQL naredbu za brisanje zapisa iz baze
+        /// <summary>
+        /// metoda za brisanje zahtjeva koja izvršaval SQL naredbu za brisanje zapisa iz baze
+        /// </summary>
+        /// <param name="zahtjev"></param>
         public static void ObrisiZahtjev (Zahtjev zahtjev) {
             string sql = $"DELETE FROM Zahtjevi WHERE IdZahtjev ={zahtjev.IdZahtjev}";
             DB.OpenConnection();
@@ -60,10 +74,15 @@ namespace HelpDesk__Matea_Klement.Repositories {
             DB.CloseConnection();
         }
 
-        //metoda za pretraživanje zahtjeva po nazivu, izvršaval SQL naredbu za pretraživanje zapisa iz baze
+        /// <summary>
+        /// metoda za pretraživanje zahtjeva po nazivu, izvršaval SQL naredbu za pretraživanje zapisa iz baze
+        /// </summary>
+        /// <param name="naziv"></param>
+        /// <returns></returns>
         public static List<Zahtjev> GetSearchedZahtjev(string naziv) {
+            var korisnik = FrmPrijava.LogiraniKorisnik;
             List<Zahtjev> pretrazivaniZahtjev = new List<Zahtjev>();
-            string sql = $"SELECT * FROM Zahtjevi WHERE ZahtjevNaslov LIKE '%{naziv}%'";
+            string sql = $"SELECT * FROM Zahtjevi WHERE IdKorisnik = '{korisnik.IdKorisnik}' AND ZahtjevNaslov LIKE '%{naziv}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read()) {

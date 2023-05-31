@@ -20,7 +20,11 @@ namespace HelpDesk__Matea_Klement {
             InitializeComponent();
         }
 
-        //metoda za provjeru korisničkih podataka te prikaz Početnog zaslona ukoliko su korisnički podatci ispravni
+        /// <summary>
+        /// metoda za provjeru korisničkih podataka te prikaz Početnog zaslona ukoliko su korisnički podatci ispravni
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPrijava_Click(object sender, EventArgs e) {
             if (txtKorisnickoIme.Text == "") {
                 MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -8,8 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HelpDesk__Matea_Klement.Repositories {
-    //klasa KorisnikRepoitory dohvaća zapise o Korisnicima iz baze te pretvara sve zapise u objekt tipa korisnik
+    /// <summary>
+    /// klasa KorisnikRepoitory dohvaća zapise o Korisnicima iz baze te pretvara sve zapise u objekt tipa korisnik
+    /// </summary>
     public class KorisnikRepository {
+        /// <summary>
+        /// metoda za dohvaćanje podataka logiranog korisnika preko korisničkog imena
+        /// </summary>
+        /// <param name="korisnickoIme"></param>
+        /// <returns></returns>
         public static Korisnik GetKorisnik(string korisnickoIme) {
             string sql = $"SELECT * FROM Korisnici WHERE KorisnickoIme = '{korisnickoIme}'";
             DB.OpenConnection();
@@ -26,7 +33,11 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return korisnik;
         }
 
-        //metoda za dohvaćanje jednog korisnika po njegovom id
+        /// <summary>
+        /// metoda za dohvaćanje jednog korisnika po njegovom id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Korisnik GetKorisnik(int id) {
             string sql = $"SELECT * FROM Korisnici WHERE IdKorisnik = {id}";
             Korisnik korisnik = null;
@@ -41,7 +52,11 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return korisnik;
         }
 
-        //metoda za mapiranje atributa objetka tipa Korisnik
+        /// <summary>
+        /// metoda za mapiranje atributa objekta tipa Korisnik
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private static Korisnik CreateObject (SqlDataReader reader) {
             string ime = reader["Ime"].ToString();
             int id = int.Parse(reader["IdKorisnik"].ToString());
@@ -63,7 +78,10 @@ namespace HelpDesk__Matea_Klement.Repositories {
             return korisnik;
         }
 
-        //metoda nad prepozitorijem koja ažurira zapis u bazi, izvršava SQL naredbu za ažuriranje korisnika
+        /// <summary>
+        /// metoda nad prepozitorijem koja ažurira zapis u bazi, izvršava SQL naredbu za ažuriranje korisnika
+        /// </summary>
+        /// <param name="korisnik"></param>
         public void AzurirajKorisnika (Korisnik korisnik) {
             string sql = $"UPDATE Korisnici " + $"SET BrojMobitela = '{korisnik.BrojMobitela}', KorisnickoIme = '{korisnik.KorisnickoIme}' WHERE IdKorisnik = {korisnik.IdKorisnik}";
             DB.OpenConnection();

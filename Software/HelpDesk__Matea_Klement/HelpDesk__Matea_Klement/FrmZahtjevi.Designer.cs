@@ -120,10 +120,10 @@
             this.txtPretrazi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPretrazi.Font = new System.Drawing.Font("Mongolian Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPretrazi.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPretrazi.Location = new System.Drawing.Point(567, 153);
             this.txtPretrazi.Name = "txtPretrazi";
-            this.txtPretrazi.Size = new System.Drawing.Size(207, 22);
+            this.txtPretrazi.Size = new System.Drawing.Size(207, 25);
             this.txtPretrazi.TabIndex = 11;
             this.txtPretrazi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged_1);

@@ -12,7 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HelpDesk__Matea_Klement{
-    //klasa FrmZahtjevi
+    /// <summary>
+    /// klasa FrmZahtjevi
+    /// </summary>
     public partial class FrmZahtjevi: Form{
         public FrmZahtjevi(){
             InitializeComponent();
@@ -21,14 +23,22 @@ namespace HelpDesk__Matea_Klement{
         private void lblPodatciProfila_Click(object sender, EventArgs e) {}
         private void panelZahtjevi_Paint(object sender, PaintEventArgs e) { }
 
-        //metoda za prikaz forme Profil, aktivacija metode odabirom gumba "Profil"
+        /// <summary>
+        /// metoda za prikaz forme Profil, aktivacija metode odabirom gumba "Profil"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnZahtjeviProfil_Click(object sender, EventArgs e) {
             FrmProfil frmZahtjeviProfil = new FrmProfil();
             Hide();
             frmZahtjeviProfil.ShowDialog();
             Close();
         }
-        //metoda za prikaz forme Zahtjevi, aktivacija metode odabirom gumba "Zahtjevi"
+        /// <summary>
+        /// metoda za prikaz forme Zahtjevi, aktivacija metode odabirom gumba "Zahtjevi"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnZahtjeviZahtjevi_Click(object sender, EventArgs e) {
             FrmZahtjevi frmZahtjeviZahtjevi = new FrmZahtjevi();
             Hide();
@@ -36,7 +46,11 @@ namespace HelpDesk__Matea_Klement{
             Close();
         }
 
-        //metoda za prikaz forme Pocetna, aktivacija metode odabirom gumba "Početna"
+        /// <summary>
+        /// metoda za prikaz forme Pocetna, aktivacija metode odabirom gumba "Početna"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnZahtjeviPocetna_Click(object sender, EventArgs e) {
             FrmPocetna frmZahtjeviPocetna = new FrmPocetna();
             Hide();
@@ -44,12 +58,18 @@ namespace HelpDesk__Matea_Klement{
             Close();
         }
 
-        //metoda za očitavanje podataka podanesenih zahtjeva korisnika
+        /// <summary>
+        /// metoda za očitavanje podataka podanesenih zahtjeva korisnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmZahtjevi_Load(object sender, EventArgs e) {
             ShowZahtjevi();
         } 
 
-        //metoda za prikaz podnesenih zahtjeva unutar DataGridView i sređivanje zapisa
+        /// <summary>
+        /// metoda za prikaz podnesenih zahtjeva unutar DataGridView i sređivanje zapisa
+        /// </summary>
         private void ShowZahtjevi() {
             var korisnik = FrmPrijava.LogiraniKorisnik;
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjeviKorisnika(korisnik.IdKorisnik);
@@ -73,7 +93,11 @@ namespace HelpDesk__Matea_Klement{
             dgvZahtjevi.Columns["ZahtjevOpis"].Width = 200;
         }
 
-        //metoda za kreiranje zahtjeva, aktivacija metode odabirom gumba "Kreiraj zahtjev"
+        /// <summary>
+        /// metoda za kreiranje zahtjeva, aktivacija metode odabirom gumba "Kreiraj zahtjev"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnKreirajZahtjev_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -82,7 +106,11 @@ namespace HelpDesk__Matea_Klement{
             }
         }
 
-        //metoda za brisanje zahtjeva, aktivacija metode označavanjem željenog zapisa i pristiskom na gumb "Obriši"
+        /// <summary>
+        /// metoda za brisanje zahtjeva, aktivacija metode označavanjem željenog zapisa i pristiskom na gumb "Obriši"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnObrisi_Click(object sender, EventArgs e) {
             Zahtjev selectedZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             if (selectedZahtjev != null) {
@@ -94,7 +122,11 @@ namespace HelpDesk__Matea_Klement{
             this.Close();
         }
 
-        //metoda za pretraživanje zapisa u DataGridView po naslovu zahtjeva, aktivacija metode odabitom na prazan textbox te unosom željenog teksa
+        /// <summary>
+        /// metoda za pretraživanje zapisa u DataGridView po naslovu zahtjeva, aktivacija metode odabitom na prazan textbox te unosom željenog teksa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtPretrazi_TextChanged_1(object sender, EventArgs e) {
             var pretrazivaniZahtjev = ZahtjevRepository.GetSearchedZahtjev(txtPretrazi.Text);
             dgvZahtjevi.DataSource = pretrazivaniZahtjev;
