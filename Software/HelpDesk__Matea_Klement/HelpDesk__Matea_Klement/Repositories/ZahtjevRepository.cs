@@ -16,17 +16,17 @@ namespace HelpDesk__Matea_Klement.Repositories {
         /// <param name="id"></param>
         /// <returns></returns>
         public static List<Zahtjev> GetZahtjeviKorisnika(int id) {
-            List<Zahtjev> evaluations = new List<Zahtjev>();
+            List<Zahtjev> zahtjevi = new List<Zahtjev>();
             string sql = $"SELECT * FROM Zahtjevi WHERE IdKorisnik = {id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read()) {
                 Zahtjev evaluation = CreateObject(reader);
-                evaluations.Add(evaluation);
+                zahtjevi.Add(evaluation);
             }
             reader.Close();
             DB.CloseConnection();
-            return evaluations;
+            return zahtjevi;
         }
 
         /// <summary>

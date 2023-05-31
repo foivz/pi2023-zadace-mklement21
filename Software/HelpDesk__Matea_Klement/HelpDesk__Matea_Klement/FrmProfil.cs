@@ -87,7 +87,6 @@ namespace HelpDesk__Matea_Klement {
         private void btnSpremi_Click(object sender, EventArgs e) {
             var logiraniKorisnik = FrmPrijava.LogiraniKorisnik;
             Korisnik azuriranjeKorisnika = KorisnikRepository.GetKorisnik(logiraniKorisnik.IdKorisnik);
-            var korisnikLozinka = txtTrenutnaZaporka.ToString();
             azuriranjeKorisnika.KorisnickoIme = txtKorisnickoIme.Text;
             azuriranjeKorisnika.BrojMobitela = txtBroj.Text;
             azuriranjeKorisnika.Email = txtEmail.Text;
